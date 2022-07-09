@@ -1,0 +1,10 @@
+/* Подвал */
+.page-footer {
+    background-color: $primary-bg-color;
+
+   &__content {
+        padding-top: 60px;
+        padding-bottom: 60px;
+        display: flex;
+    }
+}

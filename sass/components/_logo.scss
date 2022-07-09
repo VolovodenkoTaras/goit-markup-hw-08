@@ -1,0 +1,17 @@
+/* Логотип */
+.logo {
+    color: $accent-color;
+    font-family: $font-family-raleway;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: calc(35.96 / 26);
+    text-decoration: none;
+
+    &--black {
+        color: $primary-black-color;
+        }
+
+    &--white {
+        color: $primary-white-color;
+        }
+}

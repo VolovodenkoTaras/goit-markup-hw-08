@@ -1,0 +1,77 @@
+body {
+    color: $primary-text-color;
+    background-color: $primary-white-color ;
+    font-family: $font-family-roboto;
+    letter-spacing: 0.03em;
+    font-size: 14px;
+    line-height: calc(16.41 / 14);
+}
+
+
+/*Сброс марджинов верх и низ у заголовков, абзацев и списков*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* Не растягивать комментарии пользователем*/
+textarea {
+    resize: none;
+}
+
+/*Техника отзывчивых изображений*/
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Техника скрытия ненужного */
+.visually-hidden {
+    @extend %visually-hidden;
+}
+
+/* Секции */
+.section {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 94px;
+    padding-bottom: 94px;
+
+    &--no-padding-bottom {
+    padding-bottom: 0;
+    }
+
+    &--bc-grey {
+    background-color: $second-grey-color;
+    }
+
+    &__title {
+    color: $primary-black-color;
+
+    font-weight: 700;
+    font-size: 36px;
+    line-height: calc(42.19 / 36);
+    text-align: center;
+
+    margin-top: 0;
+    margin-bottom: 50px;
+    }
+
+}
+
+/* Контейнеры */
+.container {
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;  
+}

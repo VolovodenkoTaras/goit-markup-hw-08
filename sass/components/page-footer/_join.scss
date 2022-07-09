@@ -1,0 +1,26 @@
+.join {
+    margin-right: 93px;
+    padding-top: 15px;
+
+    &__text {
+            color: $primary-white-color;
+            font-weight: 700;
+            text-transform: uppercase;
+    
+            margin-bottom: 20px;
+        }
+
+/* Социальные сети студии */
+
+    &__link {
+        color: $primary-white-color;
+        background-color: $social-links-ft-bg-color;
+    }
+
+
+    &__link:hover,
+    &__link:focus {
+        background-color: $accent-color;
+    }
+
+}

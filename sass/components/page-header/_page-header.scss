@@ -1,0 +1,8 @@
+.page-header {
+   border-bottom: 1px solid $header-border-bottom-color;
+
+&__content,
+&__nav {
+    @include centered-flex();
+    }
+}

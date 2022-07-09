@@ -1,0 +1,58 @@
+/* Навигация по сайту */
+
+.site-nav {
+    @extend %list;
+    @include centered-flex();
+    margin-left: 93px;
+    
+    &__item:not(:last-child) {
+        margin-right: 50px;
+    }
+    
+    &__link {
+        position: relative;
+        color: $title-text-color;
+        font-weight: 500;
+        letter-spacing: 0.02em;
+        text-decoration: none;
+    
+        display: block;
+        padding-top: 32px;
+        padding-bottom: 32px;
+    
+        @include transition();
+    }
+
+    &__link:hover,
+    &__link:focus {
+        color: $accent-color;
+    }
+    
+    &__link--current {
+        color: $accent-color;
+    }
+    
+    /*Подчёркивание ссылки текущей страницы (на которой сейчас находится пользователь)*/
+    &__link::after {
+        position: absolute;
+        content: '';
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 4px;
+        background-color: $accent-color;
+        border-radius: 2px;
+    
+        opacity: 0;
+        @include transition(opacity)
+    }
+    
+    &__link:hover::after {
+        opacity: 1;
+    }
+    
+    &__link--current::after {
+        opacity: 1;
+    }
+}
+

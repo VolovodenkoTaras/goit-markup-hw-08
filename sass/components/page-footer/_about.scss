@@ -1,0 +1,29 @@
+.about {
+    margin-right: 70px;
+}
+
+.footer-contacts {
+  @extend %list;
+  margin-top: 20px;
+
+    &__item:not(:last-child) {
+        margin-bottom: 9px;
+    }
+
+    &__link {
+        color: $contacts-ft-color;
+        font-style: normal;
+        line-height: calc(24 / 14);
+        text-decoration: none;
+        @include transition();
+    }
+
+    &__link--white {
+        color: $primary-white-color;
+    }
+    
+    &__link:hover,
+    &__link:focus {
+        color: $accent-color;
+    }
+}

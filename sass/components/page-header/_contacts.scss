@@ -1,0 +1,42 @@
+.header-contacts {
+    @extend %list;
+
+    @include centered-flex();
+    margin-left: auto;
+
+    &__item:last-child {
+    margin-left: 50px;
+        }
+
+    &__link {
+    color: $primary-text-color;
+
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+
+    @include transition()
+        }    
+    
+    &__link:hover,
+    &__link:focus {
+    color: $accent-color;
+        }    
+
+    &__icon-mail {
+    fill: currentColor;
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+        }
+
+    &__icon-phone {
+    fill: currentColor;
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+        }
+
+}
