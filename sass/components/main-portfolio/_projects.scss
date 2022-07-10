@@ -4,15 +4,12 @@
     @extend %list;
     display: flex;
     flex-wrap: wrap;
-    margin-left: calc(-1 * $portfolio-projects-gap);
-    margin-top: calc(-1 * $portfolio-projects-gap);
+    gap:$projects-indent;
 
     &__item {
-            flex-basis: calc(100% / 3 - $portfolio-projects-gap);
-    
-            margin-left: $portfolio-projects-gap;
-            margin-top: $portfolio-projects-gap;
-    
+ 
+            flex-basis: calc((100% - $projects-indent * ($projects-item - 1)) / $projects-item);
+
             @include transition(box-shadow);
         }
 
@@ -78,7 +75,8 @@
             padding: 63px 24px;
         }
 
-    .projects__item:hover & {
+    .projects__link:hover &,
+    .projects__link:focus & {
             transform: translateY(0);
         }
 }

@@ -5,7 +5,8 @@
 
     &__item:not(:last-child) {
             margin-right: 10px;
-        }
+    }
+
     &__link {
         @include centered-flex();
         text-decoration: none;
