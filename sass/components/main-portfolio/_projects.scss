@@ -1,14 +1,26 @@
 /* Список портфолио */
+   $projects-indent: 30px;
 
 .projects {
     @extend %list;
-    display: flex;
-    flex-wrap: wrap;
-    gap:$projects-indent;
+    gap: $projects-indent;
+
+    @media screen and (min-width:$table) {
+        display: flex;
+        flex-wrap: wrap; 
+    }
 
     &__item {
- 
+
+        @media screen and (min-width:$table) {
+            $projects-item: 2;
             flex-basis: calc((100% - $projects-indent * ($projects-item - 1)) / $projects-item);
+        }
+         
+         @media screen and (min-width:$desktop) {
+            $projects-item: 3;
+            flex-basis: calc((100% - $projects-indent * ($projects-item - 1)) / $projects-item)
+        }
 
             @include transition(box-shadow);
         }
