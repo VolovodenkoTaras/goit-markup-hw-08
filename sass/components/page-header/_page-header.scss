@@ -1,8 +1,49 @@
 .page-header {
    border-bottom: 1px solid $header-border-bottom-color;
+   position: relative;
 
-&__content,
-&__nav {
-    @include centered-flex();
-    }
+    &__content,
+    &__nav {
+        @include centered-flex();
+      }     
+}
+
+.menu-button {
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.menu-button .icon-cross {
+    display: none;
+}
+
+.menu-button.is-open .icon-cross {
+    display: block;
+}
+
+.menu-button.is-open .icon-menu {
+    display: none;
+}
+
+.menu-container {
+    display: none;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+
+    background-color: #f0f;
+
+    padding: 20px;
+    text-align: center;
+
+}
+
+.menu-container.is-open {
+    display: block;
 }

@@ -3,15 +3,21 @@
 
 .projects {
     @extend %list;
-    gap: $projects-indent;
 
     @media screen and (min-width:$table) {
         display: flex;
         flex-wrap: wrap; 
+        gap: $projects-indent;
+    }
+
+
+    &__item:not(:last-child) {
+        @media screen and (max-width:calc($table - 1px)) {
+            margin-bottom: 30px;
+        }
     }
 
     &__item {
-
         @media screen and (min-width:$table) {
             $projects-item: 2;
             flex-basis: calc((100% - $projects-indent * ($projects-item - 1)) / $projects-item);
@@ -32,8 +38,8 @@
         }
 
     &__box {
-    position: relative;
-    overflow: hidden;
+        position: relative;
+        overflow: hidden;
         }
     
     &__description {
