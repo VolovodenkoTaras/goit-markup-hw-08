@@ -3,15 +3,23 @@
 .team {
     @extend %list;
     // @include centered-flex($justify-content: space-between);
-    padding-left: 0;
+    display: block;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
 
     &__item:not(:last-child) {
-            margin-right: 30px;
+        @media screen and (min-width:$desktop) {
+                margin-right: 30px
+            }
+            ;
         }
 
     &__box {
         background-color: $primary-white-color;
     
+        margin-left: auto;
+        margin-right: auto;
         padding-top: 30px;
         padding-bottom: 30px;
         text-align: center;

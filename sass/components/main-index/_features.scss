@@ -13,16 +13,22 @@
 
     &__box {
         @include centered-flex();
-        max-width: 270px;
         height: 120px;
         margin-bottom: 30px;
         background-color: $second-grey-color;
         border-radius: 4px;
 
-        @media screen and (min-width:$desktop) {
-                width: 270px;
-                margin-bottom: 30px;
+       @media screen and (min-width:$mobile) {
+                max-width: 450px;
             }
+
+        @media screen and (min-width:($mobile + 1px)) and (max-width:($table))  {
+                max-width: 354px;
+               }    
+
+        @media screen and (min-width:($table +1px)) and (max-width:$desktop) {
+                width: 270px;
+               }
 
              }
     &__icon {
@@ -37,7 +43,7 @@
         font-size: 14px;
         line-height: calc(16.41 / 14);
         text-transform: uppercase;
-    
+        text-align: center;
         margin-bottom: 10px;
     }
     
