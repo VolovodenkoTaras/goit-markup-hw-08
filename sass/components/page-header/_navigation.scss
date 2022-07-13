@@ -2,12 +2,23 @@
 
 .site-nav {
     @extend %list;
-    @include centered-flex();
-    margin-left: 93px;
+
+    @media screen and (min-width:$table) {
+        @include centered-flex();
+        margin-left: 88px;
+        } 
+
+    @media screen and (min-width:$desktop) {
+        margin-left: 93px;
+        }         
     
     &__item:not(:last-child) {
-        margin-right: 50px;
+        @media screen and (min-width:$table) {
+                margin-right: 50px
+            }
     }
+        
+   
     
     &__link {
         position: relative;
@@ -15,10 +26,17 @@
         font-weight: 500;
         letter-spacing: 0.02em;
         text-decoration: none;
-    
         display: block;
+
+        @media screen and (max-width:calc($table - 1px)) {
+        font-size:40px;
+        line-height: calc(48 / 40);
+            }
+
+        @media screen and (min-width:$table) {
         padding-top: 32px;
         padding-bottom: 32px;
+            }
     
         @include transition();
     }
@@ -34,6 +52,9 @@
     
     /*Подчёркивание ссылки текущей страницы (на которой сейчас находится пользователь)*/
     &__link::after {
+        
+        @media screen and (min-width:$table) {
+
         position: absolute;
         content: '';
         left: 0;
@@ -45,14 +66,22 @@
     
         opacity: 0;
         @include transition(opacity)
+            }
+
+        
     }
     
     &__link:hover::after {
-        opacity: 1;
+        @media screen and (min-width:$table) {
+            opacity: 1;
+            }
+        
     }
     
     &__link--current::after {
-        opacity: 1;
+        @media screen and (min-width:$table) {
+            opacity: 1;
+        }
     }
 }
 

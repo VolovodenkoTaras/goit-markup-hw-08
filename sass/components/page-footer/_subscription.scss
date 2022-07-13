@@ -9,9 +9,9 @@
             margin-bottom: 20px;
         }
 
-    &__box {
-        @include centered-flex();
-    }
+    // &__box {
+    //     @include centered-flex();
+    // }
 
 
     &__input {
@@ -35,7 +35,7 @@
     }
 
     &__button {
-        @include centered-flex($justify-content:space-between);
+        // @include centered-flex($justify-content:space-between);
         padding: 10px 28px;
     }
 

@@ -1,7 +1,6 @@
 /* Герой */
 .hero {
     max-width: 1600px;
-    height: 600px;
     margin-left: auto;
     margin-right: auto;
     background-color: $primary-bg-color;
@@ -12,7 +11,11 @@
     background-position: center;
     background-size: cover;
     text-align: center;
-    padding: 200px 0;
+    padding: 118px 0;
+
+    @media screen and (min-width:$desktop) {
+            padding: 200px 0;
+        }
 
     &__title {
             color: $primary-white-color;

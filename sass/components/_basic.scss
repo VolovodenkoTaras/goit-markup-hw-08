@@ -9,12 +9,19 @@ body {
     // @media (min-width:800px) {
     //             background-color: #000000;
     //     }
+
+    &.modal-open {
+        overflow: hidden;
+    }
 }
+
 // запись для css
 // @media (min-width:800px) {
 //     body {background-color: #000000;
 //     }
 // }
+
+
  
 
 /*Сброс марджинов верх и низ у заголовков, абзацев и списков*/

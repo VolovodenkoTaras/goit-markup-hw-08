@@ -1,22 +1,54 @@
 /* Постоянные клиенты*/
+  $projects-indent: 30px;
+
 .clients {
     @extend %list;
-    @include centered-flex($justify-content: space-between);
+    display: flex;
+    flex-wrap: wrap;
+    gap: $projects-indent;
     padding-left: 0;
 
-    &__item {
-        @include centered-flex();
-        }
+    // &__item:not(:last-child) {
+    //         @media screen and (max-width:calc($table - 1px)) {
+    //             margin-bottom: 30px;
+    //         }
+    //     }
     
-    &__item:not(:last-child) {
-    margin-right: 30px;
+        &__item {
+
+            @media screen and (min-width:$mobile) {
+                $projects-item: 2;
+                flex-basis: calc((100% - $projects-indent * ($projects-item - 1)) / $projects-item);
+            }
+
+            @media screen and (min-width:$table) {
+                $projects-item: 3;
+                flex-basis: calc((100% - $projects-indent * ($projects-item - 1)) / $projects-item);
+            }
+    
+            @media screen and (min-width:$desktop) {
+                $projects-item: 6;
+                flex-basis: calc((100% - $projects-indent * ($projects-item - 1)) / $projects-item)
+            }
+    
+            @include transition(box-shadow);
         }
+
+    // &__item {
+    //     @include centered-flex();
+    //     }
+    
+    // &__item:not(:last-child) {
+    //     @media screen and (min-width:$desktop) {
+    //             margin-right: 30px;
+    //         }
+   
+    //     }
     
     &__link {
         @include centered-flex();
         text-decoration: none;
     
-        width: 170px;
         height: 92px;
     
         color: $clients-primary-color;
@@ -26,6 +58,18 @@
     
         transition: border-color $transition-duration $transition-function,
         color $transition-duration $transition-function;
+
+        @media screen and (min-width:$mobile) {
+                max-width: 210px;
+            }
+
+        @media screen and (min-width:$table) {
+                width: 226px;
+            }
+
+        @media screen and (min-width:$desktop) {
+                width: 170px;
+            }
        }
          
     &__link:hover,

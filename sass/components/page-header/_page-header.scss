@@ -2,19 +2,47 @@
    border-bottom: 1px solid $header-border-bottom-color;
    position: relative;
 
-    &__content,
+    &__content {
+        @include centered-flex($justify-content:space-between);
+      }  
+      
     &__nav {
-        @include centered-flex();
-      }     
+        @media screen and (min-width:$table) {
+                @include centered-flex();
+            }
+      }   
 }
+
+  
 
 .menu-button {
     display: inline-flex;
+    justify-content: center;
+    align-items: center;
     margin: 0;
     padding: 0;
     border: none;
     background-color: transparent;
     cursor: pointer;
+
+    width: 40px;
+    height: 40px;
+
+    &__svg {
+    width: 24px;
+    height: 16px;
+    fill: $title-text-color;
+    }
+
+    &__svg:hover,
+    &__svg:focus {
+    fill: $accent-color;
+        }  
+
+        @media screen and (min-width:$table) {
+            display: none;
+        }   
+        
 }
 
 .menu-button .icon-cross {
@@ -30,20 +58,31 @@
 }
 
 .menu-container {
-    display: none;
 
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
+    background-color: $primary-white-color;
 
-    background-color: #f0f;
+        @media screen and (max-width:calc($table - 1px)) {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
 
-    padding: 20px;
-    text-align: center;
+            padding: 48px 40px;
 
+
+        &.is-open {
+                display: block;
+            }
+
+
+        }
+
+        @media screen and (min-width:$table) {
+            @include centered-flex($justify-content: space-between);
+            flex-grow: 1;
+
+        }
+        
 }
 
-.menu-container.is-open {
-    display: block;
-}
