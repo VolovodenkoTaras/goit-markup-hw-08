@@ -1,0 +1,25 @@
+.header-social {
+    @extend %list;
+
+    @media screen and (max-width:($table - 1px)) {
+        @include centered-flex($justify-content:flex-start);
+        gap: 20px;
+    }
+
+    @media screen and (min-width:$table) {
+        display: none;
+    }
+
+    &__link {
+        color: $accent-color;
+
+        font-weight: 500;
+         letter-spacing: 0.02em;
+         font-size: 18px;
+         line-height: calc(22 / 18);
+
+         text-decoration: none;
+    }
+         
+
+}

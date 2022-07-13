@@ -1,32 +1,49 @@
 .header-contacts {
     @extend %list;
 
-    @media screen and (min-width:$table) {
-        //    margin-left: 70px;
+        @media screen and (max-width:($table - 1px)) {
+            display: flex;
+            flex-direction: column-reverse;
+            margin-bottom: 64px;
         }
 
-    @media screen and (min-width:$desktop) {
+        @media screen and (min-width:$desktop) {
             @include centered-flex();
         }
 
-    // margin-left: auto;
+
+    &__item:first-child {
+
+        @media screen and (max-width:($table - 1px)) {
+            color: $primary-text-color;
+            font-size: 24px;
+            line-height: calc(28 / 24);
+            }
+        }
 
     &__item:last-child {
-    @media screen and (min-width:$desktop) {
+
+        @media screen and (max-width:($table - 1px)) {
+            color: $accent-color;
+            font-size: 34px;
+            line-height: calc(40 / 34);
+            margin-bottom: 32px;
+        }
+
+        @media screen and (min-width:$desktop) {
             margin-left: 50px;
         }
         }
 
     &__link {
-    color: $primary-text-color;
-
+    color: currentColor;
     font-weight: 500;
     letter-spacing: 0.02em;
     display: inline-flex;
     align-items: center;
     text-decoration: none;
 
-    @include transition()
+    @include transition();
         }    
     
     &__link:hover,
@@ -34,18 +51,15 @@
     color: $accent-color;
         }    
 
-    &__icon-mail {
-    fill: currentColor;
-    width: 16px;
-    height: 16px;
-    margin-right: 10px;
-        }
-
+    &__icon-mail,
     &__icon-phone {
     fill: currentColor;
     width: 16px;
     height: 16px;
     margin-right: 10px;
+        
+        @media screen and (max-width:($table - 1px)) {
+            display: none;
         }
-
+        }
 }

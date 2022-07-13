@@ -7,6 +7,11 @@
       }  
       
     &__nav {
+
+        @media screen and (max-width:($table - 1px)) {
+                margin-bottom: 302px;
+            }
+
         @media screen and (min-width:$table) {
                 @include centered-flex();
             }
@@ -25,12 +30,9 @@
     background-color: transparent;
     cursor: pointer;
 
+    &__svg {
     width: 40px;
     height: 40px;
-
-    &__svg {
-    width: 24px;
-    height: 16px;
     fill: $title-text-color;
     }
 
@@ -45,20 +47,19 @@
         
 }
 
-.menu-button .icon-cross {
+.menu-button .icon-menu {
     display: none;
 }
 
-.menu-button.is-open .icon-cross {
+.menu-button.is-open .icon-menu {
     display: block;
 }
 
-.menu-button.is-open .icon-menu {
+.menu-button.is-open .icon-cross {
     display: none;
 }
 
 .menu-container {
-
     background-color: $primary-white-color;
 
         @media screen and (max-width:calc($table - 1px)) {
@@ -67,21 +68,19 @@
             top: 100%;
             left: 0;
             width: 100%;
+            z-index: 999;
 
             padding: 48px 40px;
-
 
         &.is-open {
                 display: block;
             }
-
 
         }
 
         @media screen and (min-width:$table) {
             @include centered-flex($justify-content: space-between);
             flex-grow: 1;
-
         }
         
 }

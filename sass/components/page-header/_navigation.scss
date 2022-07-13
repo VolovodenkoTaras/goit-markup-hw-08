@@ -13,6 +13,11 @@
         }         
     
     &__item:not(:last-child) {
+       
+        @media screen and (max-width:($table - 1px)) {
+                margin-bottom: 32px;
+            }
+
         @media screen and (min-width:$table) {
                 margin-right: 50px
             }
