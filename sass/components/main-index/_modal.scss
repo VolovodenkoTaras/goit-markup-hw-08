@@ -121,7 +121,9 @@
         }
     
     &__input {
-        max-width: 370px;
+        display: block;
+        width: 100%;
+        // max-width: 370px;
         margin: 4px 0px 0px 0px;
         padding: 12px 42px;
         border-radius: 4px;
@@ -156,7 +158,9 @@
         }
     
     &__commentary {
-    max-width: 370px;
+    display: block;
+    width: 100%;
+    // max-width: 370px;
     min-height: 120px;
     margin: 4px 0px 0px 0px;
     padding: 12px 16px;

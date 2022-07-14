@@ -1,6 +1,13 @@
 .join {
-    margin-right: 93px;
-    padding-top: 15px;
+
+    @media screen and (max-width:$mobile) {
+            margin-bottom: 60px;
+        }
+    
+    @media screen and (min-width:$desktop) {
+            padding-top: 15px;
+            margin-right: 93px;
+        }
 
     &__text {
             color: $primary-white-color;

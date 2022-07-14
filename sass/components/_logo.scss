@@ -3,9 +3,14 @@
     color: $accent-color;
     font-family: $font-family-raleway;
     font-weight: 700;
-    font-size: 26px;
-    line-height: calc(35.96 / 26);
+    font-size: 24px;
+    line-height: calc(33 / 24);
     text-decoration: none;
+
+     @media screen and (min-width:$desktop) {
+            font-size: 26px;
+            line-height: calc(35.96 / 26);
+        }
 
     &--black {
         color: $primary-black-color;

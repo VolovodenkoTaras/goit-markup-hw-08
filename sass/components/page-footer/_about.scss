@@ -1,5 +1,12 @@
 .about {
-    margin-right: 70px;
+    @media screen and (max-width:$mobile) {
+            margin-bottom: 60px;
+        }
+
+    @media screen and (min-width:$table) {
+            margin-right: 70px;
+        }
+    
 }
 
 .footer-contacts {

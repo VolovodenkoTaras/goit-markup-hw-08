@@ -3,8 +3,10 @@
     background-color: $primary-bg-color;
 
    &__content {
+       // display: flex;
         padding-top: 60px;
         padding-bottom: 60px;
-        // display: flex;
+        text-align: center;
+       
     }
 }
