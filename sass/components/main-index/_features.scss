@@ -3,7 +3,7 @@ $projects-indent: 30px;
 
 .features {
     @extend %list;
-    @include centered-flex($justify-content:space-between);
+    @include centered-flex($justify-content:space-between, $align-items:stretch);
     flex-wrap: wrap;
     gap: $projects-indent;
     padding-left: 0;
