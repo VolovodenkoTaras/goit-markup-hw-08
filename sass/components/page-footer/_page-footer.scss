@@ -3,10 +3,18 @@
     background-color: $primary-bg-color;
 
    &__content {
-       // display: flex;
         padding-top: 60px;
         padding-bottom: 60px;
         text-align: center;
+
+            @media screen and (min-width:$table) {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                }
+            @media screen and (min-width:$desktop) {
+                    text-align: left;
+                }            
        
     }
 }

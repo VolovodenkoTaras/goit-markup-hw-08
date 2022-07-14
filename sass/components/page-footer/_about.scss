@@ -1,9 +1,13 @@
 .about {
-    @media screen and (max-width:$mobile) {
+    @media screen and (max-width:($table - 1px)) {
             margin-bottom: 60px;
         }
 
     @media screen and (min-width:$table) {
+            margin-right: 165px;
+        }        
+
+    @media screen and (min-width:$desktop) {
             margin-right: 70px;
         }
     

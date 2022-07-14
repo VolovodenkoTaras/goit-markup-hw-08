@@ -1,12 +1,30 @@
 /* Фильтры портфолио */
+$projects-indent: 8px;
+
 .filter {
     @extend %list;
-    @include centered-flex();
-    margin-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: $projects-indent;
 
-    &__item:not(:last-child) {
-            margin-right: 8px;
-        }
+    margin-bottom: 40px;
+
+      @media screen and (min-width:$table) {
+        margin-bottom: 30px;
+        justify-content: center;
+      }
+
+      @media screen and (min-width:$desktop) {
+        margin-bottom: 50px;
+      }
+
+
+    // &__item {
+    //         @media screen and (min-width:$mobile) {
+    //             $projects-item: 3;
+    //             flex-basis: calc((100% - $projects-indent * ($projects-item - 1)) / $projects-item);
+    //         }}
+
     
     &__button {
         color: $title-text-color;
@@ -19,6 +37,8 @@
     
         padding: 6px 22px;
         text-align: center;
+
+        height: 38px;
     
         border: 0;
         border-radius: 4px;

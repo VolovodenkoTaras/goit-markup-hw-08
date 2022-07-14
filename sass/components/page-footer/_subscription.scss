@@ -1,4 +1,9 @@
 .subscription {
+
+    @media screen and (min-width:$table) and (max-width:($desktop - 1px)) {
+            margin-top: 60px;
+        }
+
     @media screen and (min-width:$desktop) {
             padding-top: 15px;
         }
@@ -11,9 +16,12 @@
             margin-bottom: 20px;
         }
 
-    // &__box {
-    //     @include centered-flex();
-    // }
+    &__box {
+        @media screen and (min-width:$desktop) {
+                @include centered-flex();
+            }
+        
+    }
 
 
     &__input {
@@ -26,17 +34,23 @@
         background-color: $primary-bg-color;
         border: 1px solid $footer-subsription-input-border-color;
         border-radius: 4px;
+
+        margin-bottom: 20px;
     
-        @media screen and (max-width:$mobile) {
+        @media screen and (max-width:($mobile - 1px)) {
             display: block;
             width: 100%;
-            margin-bottom: 20px;
             }
+
+        @media screen and (min-width:$mobile) and (max-width:($desktop - 1px)) {
+            width: 450px;
+        }    
 
         @media screen and (min-width:$desktop) {
             width: 358px;
             padding-left: 16px;
             margin-right: 12px;
+            margin-bottom: 0;
             }
     }
 

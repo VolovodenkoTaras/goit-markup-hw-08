@@ -1,6 +1,6 @@
 .join {
 
-    @media screen and (max-width:$mobile) {
+    @media screen and (max-width:($table - 1px)) {
             margin-bottom: 60px;
         }
     
