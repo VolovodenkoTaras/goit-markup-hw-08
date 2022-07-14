@@ -58,8 +58,13 @@ img {
 .section {
     margin-top: 0;
     margin-bottom: 0;
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+        @media screen and (min-width:$desktop) {
+            padding-top: 94px;
+            padding-bottom: 94px; 
+        }
 
     &--no-padding-bottom {
     padding-bottom: 0;
@@ -78,11 +83,12 @@ img {
     text-align: center;
 
     margin-top: 0;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 
         @media screen and (min-width:$desktop) {
             font-size: 36px;
             line-height: calc(42.19 / 36);  
+            margin-bottom: 50px;
         }
 
     }
@@ -98,15 +104,15 @@ img {
 
     // max-width: 1200px;
 
-    @media screen and (min-width:$mobile) {
+        @media screen and (min-width:$mobile) {
         width: $mobile;
     }
 
-    @media screen and (min-width:$table) {
+        @media screen and (min-width:$table) {
         width: $table;
     }
 
-    @media screen and (min-width:$desktop) {
+        @media screen and (min-width:$desktop) {
         width: $desktop;
     }
 

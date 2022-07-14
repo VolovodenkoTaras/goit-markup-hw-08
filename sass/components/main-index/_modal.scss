@@ -225,6 +225,7 @@
         font-size: 12px;
         line-height: calc(14.06 / 12);
         letter-spacing: 0.03em;
+        white-space: nowrap;
 
         @media screen and (min-width:$desktop) {
                 font-size: 14px;

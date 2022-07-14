@@ -1,18 +1,32 @@
 /* Команда*/
+$projects-indent: 30px;
 
 .team {
     @extend %list;
-    // @include centered-flex($justify-content: space-between);
-    display: block;
+    @include centered-flex($justify-content:space-between);
+    flex-wrap: wrap;
+    gap: $projects-indent;
+    // display: block;
     padding: 0;
     margin-left: auto;
     margin-right: auto;
 
-    &__item:not(:last-child) {
-        @media screen and (min-width:$desktop) {
-                margin-right: 30px
+    &__item {
+
+            @media screen and (min-width:$mobile) {
+                $projects-item: 1;
+                flex-basis: calc((100% - $projects-indent * ($projects-item - 1)) / $projects-item);
             }
-            ;
+
+            @media screen and (min-width:$table) {
+                $projects-item: 2;
+                flex-basis: calc((100% - $projects-indent * ($projects-item - 1)) / $projects-item);
+            }
+    
+            @media screen and (min-width:$desktop) {
+                $projects-item: 4;
+                flex-basis: calc((100% - $projects-indent * ($projects-item - 1)) / $projects-item)
+            }
         }
 
     &__box {
