@@ -8,11 +8,11 @@
       
     &__nav {
 
-        @media screen and (max-width:($table - 1px)) {
+        @media screen and (max-width:($tablet - 1px)) {
                 margin-bottom: 302px;
             }
 
-        @media screen and (min-width:$table) {
+        @media screen and (min-width:$tablet) {
                 @include centered-flex();
             }
       }   
@@ -41,7 +41,7 @@
     fill: $accent-color;
         }  
 
-        @media screen and (min-width:$table) {
+        @media screen and (min-width:$tablet) {
             display: none;
         }   
         
@@ -62,7 +62,7 @@
 .menu-container {
     background-color: $primary-white-color;
 
-        @media screen and (max-width:calc($table - 1px)) {
+        @media screen and (max-width:calc($tablet - 1px)) {
             display: none;
             position: absolute;
             top: 100%;
@@ -78,7 +78,7 @@
 
         }
 
-        @media screen and (min-width:$table) {
+        @media screen and (min-width:$tablet) {
             @include centered-flex($justify-content: space-between);
             flex-grow: 1;
         }

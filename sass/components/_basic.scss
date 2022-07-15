@@ -110,8 +110,8 @@ img {
         width: $mobile;
     }
 
-        @media screen and (min-width:$table) {
-        width: $table;
+        @media screen and (min-width:$tablet) {
+        width: $tablet;
     }
 
         @media screen and (min-width:$desktop) {

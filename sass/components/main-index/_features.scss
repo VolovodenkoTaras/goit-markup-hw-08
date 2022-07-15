@@ -23,7 +23,7 @@ $projects-indent: 30px;
         flex-basis: calc((100% - $projects-indent * ($projects-item - 1)) / $projects-item);
     }
 
-    @media screen and (min-width:$table) {
+    @media screen and (min-width:$tablet) {
         $projects-item: 2;
         flex-basis: calc((100% - $projects-indent * ($projects-item - 1)) / $projects-item);
     }
@@ -45,11 +45,11 @@ $projects-indent: 30px;
     //             max-width: 450px;
     //         }
 
-    //     @media screen and (min-width:($mobile + 1px)) and (max-width:($table))  {
+    //     @media screen and (min-width:($mobile + 1px)) and (max-width:($tablet))  {
     //             max-width: 354px;
     //            }    
 
-    //     @media screen and (min-width:($table +1px)) and (max-width:$desktop) {
+    //     @media screen and (min-width:($tablet +1px)) and (max-width:$desktop) {
     //             width: 270px;
     //            }
 

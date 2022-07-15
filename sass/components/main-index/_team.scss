@@ -17,7 +17,7 @@ $projects-indent: 30px;
                 flex-basis: calc((100% - $projects-indent * ($projects-item - 1)) / $projects-item);
             }
 
-            @media screen and (min-width:$table) {
+            @media screen and (min-width:$tablet) {
                 $projects-item: 2;
                 flex-basis: calc((100% - $projects-indent * ($projects-item - 1)) / $projects-item);
             }

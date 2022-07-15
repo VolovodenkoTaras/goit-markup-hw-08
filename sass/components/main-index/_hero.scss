@@ -45,7 +45,7 @@
 }
 
 
-@media screen and (min-width:($mobile + 1px)) and (max-width:($table)) {
+@media screen and (min-width:($mobile + 1px)) and (max-width:($tablet)) {
   .hero {
         background-image:linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
          url('../images/hero768@1x-min.jpg');
@@ -61,7 +61,7 @@
 }    
 }
 
-@media screen and (min-width:($table + 1px)) {
+@media screen and (min-width:($tablet + 1px)) {
     .hero {
         background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
             url('../images/hero1200@1x-min.jpg');

@@ -1,9 +1,9 @@
 .about {
-    @media screen and (max-width:($table - 1px)) {
+    @media screen and (max-width:($tablet - 1px)) {
             margin-bottom: 60px;
         }
 
-    @media screen and (min-width:$table) {
+    @media screen and (min-width:$tablet) {
             margin-right: 165px;
         }        
 
