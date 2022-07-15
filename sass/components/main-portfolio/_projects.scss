@@ -1,5 +1,5 @@
 /* Список портфолио */
-   $projects-indent: 30px;
+   $indent: 30px;
 
 .projects {
     @extend %list;
@@ -7,7 +7,7 @@
     @media screen and (min-width:$tablet) {
         display: flex;
         flex-wrap: wrap; 
-        gap: $projects-indent;
+        gap: $indent;
     }
 
 
@@ -19,13 +19,13 @@
 
     &__item {
         @media screen and (min-width:$tablet) {
-            $projects-item: 2;
-            flex-basis: calc((100% - $projects-indent * ($projects-item - 1)) / $projects-item);
+            $item: 2;
+            flex-basis: calc((100% - $indent * ($item - 1)) / $item);
         }
          
          @media screen and (min-width:$desktop) {
-            $projects-item: 3;
-            flex-basis: calc((100% - $projects-indent * ($projects-item - 1)) / $projects-item)
+            $item: 3;
+            flex-basis: calc((100% - $indent * ($item - 1)) / $item)
         }
 
             @include transition(box-shadow);

@@ -1,11 +1,10 @@
 /* Фильтры портфолио */
-$projects-indent: 8px;
 
 .filter {
     @extend %list;
     display: flex;
     flex-wrap: wrap;
-    gap: $projects-indent;
+    gap: 8px;
 
     margin-bottom: 40px;
 
@@ -17,13 +16,6 @@ $projects-indent: 8px;
       @media screen and (min-width:$desktop) {
         margin-bottom: 50px;
       }
-
-
-    // &__item {
-    //         @media screen and (min-width:$mobile) {
-    //             $projects-item: 3;
-    //             flex-basis: calc((100% - $projects-indent * ($projects-item - 1)) / $projects-item);
-    //         }}
 
     
     &__button {

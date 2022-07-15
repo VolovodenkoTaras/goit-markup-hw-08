@@ -47,6 +47,11 @@
     
             transform: translate(-50%, -50%) scale(1);
         }
+
+         @media screen and (min-width:$desktop) {
+            max-width: 528px;
+            max-height: 581px;
+        }
     
         @media screen and (min-width:$desktop) {
             max-width: 528px;

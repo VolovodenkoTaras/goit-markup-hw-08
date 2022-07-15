@@ -1,11 +1,11 @@
 /* Команда*/
-$projects-indent: 30px;
+$indent: 30px;
 
 .team {
     @extend %list;
     @include centered-flex($justify-content:space-between);
     flex-wrap: wrap;
-    gap: $projects-indent;
+    gap: $indent;
     padding: 0;
     margin-left: auto;
     margin-right: auto;
@@ -13,18 +13,18 @@ $projects-indent: 30px;
     &__item {
 
             @media screen and (min-width:$mobile) {
-                $projects-item: 1;
-                flex-basis: calc((100% - $projects-indent * ($projects-item - 1)) / $projects-item);
+                $item: 1;
+                flex-basis: calc((100% - $indent * ($item - 1)) / $item);
             }
 
             @media screen and (min-width:$tablet) {
-                $projects-item: 2;
-                flex-basis: calc((100% - $projects-indent * ($projects-item - 1)) / $projects-item);
+                $item: 2;
+                flex-basis: calc((100% - $indent * ($item - 1)) / $item);
             }
     
             @media screen and (min-width:$desktop) {
-                $projects-item: 4;
-                flex-basis: calc((100% - $projects-indent * ($projects-item - 1)) / $projects-item)
+                $item: 4;
+                flex-basis: calc((100% - $indent * ($item - 1)) / $item)
             }
         }
 

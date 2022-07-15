@@ -1247,6 +1247,12 @@ img {
     max-height: 581px;
   }
 }
+@media screen and (min-width: 1200px) {
+  .modal {
+    max-width: 528px;
+    max-height: 581px;
+  }
+}
 
 .btn-close {
   position: absolute;
