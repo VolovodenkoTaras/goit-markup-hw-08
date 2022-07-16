@@ -9,7 +9,7 @@
     &__nav {
 
         @media screen and (max-width:($tablet - 1px)) {
-                margin-bottom: 302px;
+                margin-bottom: auto;
             }
 
         @media screen and (min-width:$tablet) {
