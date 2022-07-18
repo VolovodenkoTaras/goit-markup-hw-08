@@ -1,5 +1,4 @@
 /* Постоянные клиенты*/
-  $indent: 30px;
 
 .clients {
     @extend %list;
@@ -13,23 +12,19 @@
         &__item {
 
             @media screen and (max-width:($mobile - 1px)) {
-                $item: 1;
-                flex-basis: calc((100% - $indent * ($item - 1)) / $item);
+                flex-basis: $flex-basis-item1;
             }
 
             @media screen and (min-width:$mobile) {
-                $item: 2;
-                flex-basis: calc((100% - $indent * ($item - 1)) / $item);
+                flex-basis: $flex-basis-item2;
             }
 
             @media screen and (min-width:$tablet) {
-                $item: 3;
-                flex-basis: calc((100% - $indent * ($item - 1)) / $item);
+                flex-basis: $flex-basis-item3;
             }
     
             @media screen and (min-width:$desktop) {
-                $item: 6;
-                flex-basis: calc((100% - $indent * ($item - 1)) / $item);
+                flex-basis: $flex-basis-item6;
             }
     
             @include transition(box-shadow);

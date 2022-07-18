@@ -1,5 +1,4 @@
 /* Особенности*/
-$indent: 30px;
 
 .features {
     @extend %list;
@@ -13,18 +12,15 @@ $indent: 30px;
 &__item {
 
     @media screen and (min-width:$mobile) {
-        $item: 1;
-        flex-basis: calc((100% - $indent * ($item - 1)) / $item);
+        flex-basis: $flex-basis-item1;
     }
 
     @media screen and (min-width:$tablet) {
-        $item: 2;
-        flex-basis: calc((100% - $indent * ($item - 1)) / $item);
+        flex-basis: $flex-basis-item2;
     }
 
     @media screen and (min-width:$desktop) {
-        $item: 4;
-        flex-basis: calc((100% - $indent * ($item - 1)) / $item)
+        flex-basis: $flex-basis-item4;
     }
 }
 
