@@ -17,6 +17,16 @@
             padding: 200px 0;
         }
 
+    &__box {
+        max-width: 360px;
+        margin-left: auto;
+        margin-right: auto;
+
+        @media screen and (min-width:$desktop) {
+                max-width: 696px;
+            }
+    }   
+
     &__title {
             color: $primary-white-color;
     

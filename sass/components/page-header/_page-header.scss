@@ -2,6 +2,22 @@
    border-bottom: 1px solid $header-border-bottom-color;
    position: relative;
 
+//    Закрепленный хэдэр
+    // @media screen and (min-width:$tablet) {
+    //     position: fixed;
+    //     top: 0;
+    //     left: 0;
+    //     width: 100%;
+    //     z-index: 500;
+    //     border-bottom:0;
+    // }
+
+    // &.no-transparency {
+    //     background-color:  rgba(255, 255, 255, 0.1);
+    //     backdrop-filter: blur(100px);
+    // }
+//    Закрепленный хэдэр    
+
     &__content {
         @include centered-flex($justify-content:space-between);
       }  
