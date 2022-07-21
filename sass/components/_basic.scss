@@ -5,37 +5,36 @@ body {
     letter-spacing: 0.03em;
     font-size: 14px;
     line-height: calc(16.41 / 14);
-    // запись для sass
-    // @media (min-width:800px) {
-    //             background-color: #000000;
-    //     }
 
     &.modal-open {
         overflow: hidden;
     }
 }
 
-// запись для css
-// @media (min-width:800px) {
-//     body {background-color: #000000;
-//     }
-// }
-
-
- 
-
-/*Сброс марджинов верх и низ у заголовков, абзацев и списков*/
+/*Частичный сброс стилей начало*/
 p,
 h1,
 h2,
 h3,
 h4,
 h5,
-h6,
-ul {
-    margin-top: 0;
-    margin-bottom: 0;
+h6 {
+    margin: 0;
 }
+
+a {
+    text-decoration: none;
+    color: currentColor;
+}
+
+ul,ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+/*Частичный сброс стилей конец*/
+
+
 
 /* Не растягивать комментарии пользователем*/
 textarea {
