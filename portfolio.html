@@ -14,13 +14,17 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
     />
+
+    <!-- AOS animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
     <link rel="stylesheet" href="./css/main.min.css" />
     <!-- <link rel="stylesheet" href="./css/styles.css" /> -->
   </head>
 
   <body>
     <!--Шапка сайта-->
-    <header class="page-header" data-header>
+    <header class="page-header" id="header" data-header>
       <div class="page-header__content container">
         <a class="logo" href="./index.html">Web<span class="logo--black">Studio</span></a>
 
@@ -663,10 +667,26 @@
       </div>
     </footer>
 
+    <!-- Кнопка прокрутки вверх:  -->
+    <div data-arrow>
+      <a class="scroll" href="#header">
+        <svg class="scroll__arrow" width="20" height="20">
+          <use href="./images/icons.svg#arrow-top"></use>
+        </svg>
+      </a>
+    </div>
+
     <!-- Скрипт мобильного меню:  -->
     <script src="./js/mobile-menu.js"></script>
 
     <!-- Скрипт скролла закрепленного хэдэра:  -->
     <script src="./js/header-scroll.js"></script>
+
+    <!-- Скрипт скролла закрепленного хэдэра:  -->
+    <script src="./js/header-scroll.js"></script>
+
+    <!-- AOS aniamtion library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./js/animations.js"></script>
   </body>
 </html>

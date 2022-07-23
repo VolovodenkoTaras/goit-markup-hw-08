@@ -1,0 +1,32 @@
+/**
+  |============================
+  | fixed element
+  |============================
+*/
+ .no-transparency .scroll {
+     
+  @media screen and (max-width:($tablet - 1px)) {
+            position: fixed;
+            bottom: 40px;
+            right: 20px;
+          
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+          
+            background-color: $accent-color;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+          
+            animation: slide-top 1s linear 2s infinite alternate both;
+          
+            &__arrow {
+              fill: #fff;
+            }
+         }
+
+    
+}
