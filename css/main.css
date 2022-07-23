@@ -222,6 +222,21 @@ img {
   border-bottom: 1px solid #ececec;
   position: relative;
 }
+@media screen and (min-width: 768px) {
+  .page-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 500;
+    border-bottom: 0;
+  }
+}
+.page-header.no-transparency {
+  background-color: rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(40px);
+          backdrop-filter: blur(40px);
+}
 .page-header__content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -558,6 +573,18 @@ img {
   }
 }
 
+@media screen and (min-width: 768px) {
+  .no-transparency .header-contacts {
+    color: #000000;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 250ms;
+            transition-duration: 250ms;
+    -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
 @media screen and (max-width: 767px) {
   .header-social {
     display: -webkit-box;
@@ -606,6 +633,11 @@ img {
   background-size: cover;
   text-align: center;
   padding: 118px 0;
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    margin-top: 80px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .hero {
@@ -953,12 +985,18 @@ img {
             justify-content: center;
   }
 }
+@media screen and (min-width: 768px) {
+  .filter {
+    margin-top: 80px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .filter {
     margin-bottom: 50px;
   }
 }
 .filter__button {
+  display: inline-block;
   color: #212121;
   background-color: #f5f4fa;
   font-family: inherit;
@@ -981,6 +1019,35 @@ img {
   background-color: #2196f3;
   -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
           box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+input[type=radio] {
+  position: absolute;
+  left: -9999px;
+}
+
+[value=Все]:checked ~ .filter [for=Все],
+[value=Веб-сайт]:checked ~ .filter [for=Веб-сайт],
+[value=Приложение]:checked ~ .filter [for=Приложение],
+[value=Дизайн]:checked ~ .filter [for=Дизайн],
+[value=Маркетинг]:checked ~ .filter [for=Маркетинг] {
+  color: #ffffff;
+  background-color: #2196f3;
+  -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+[value=Все]:checked ~ .projects [data-category] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+[value=Веб-сайт]:checked ~ .projects .projects__item:not([data-category~=Веб-сайт]),
+[value=Приложение]:checked ~ .projects .projects__item:not([data-category~=Приложение]),
+[value=Дизайн]:checked ~ .projects .projects__item:not([data-category~=Дизайн]),
+[value=Маркетинг]:checked ~ .projects .projects__item:not([data-category~=Маркетинг]) {
+  display: none;
 }
 
 /* Список портфолио */

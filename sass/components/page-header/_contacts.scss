@@ -102,3 +102,12 @@
         }
         }
 }
+
+//    Закрепленный хэдэр
+.no-transparency .header-contacts {
+    @media screen and (min-width:($tablet)) {
+            color: $primary-black-color;
+            @include transition();
+        }
+}
+//    Закрепленный хэдэр
