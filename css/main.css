@@ -484,7 +484,7 @@ img {
 .menu-container {
   background-color: #ffffff;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 767.98px) {
   .menu-container {
     display: none;
     position: fixed;

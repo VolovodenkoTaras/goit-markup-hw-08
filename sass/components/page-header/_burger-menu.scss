@@ -43,7 +43,8 @@
 .menu-container {
   background-color: $primary-white-color;
 
-  @media screen and (max-width:calc($tablet - 1px)) {
+  // Отнимаем 0.02px а не 1px из-за особенности браузеров 
+  @media screen and (max-width:calc($tablet - 0.02px)) {
     display: none;
     position: fixed;
     top: 0;
