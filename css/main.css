@@ -844,6 +844,7 @@ img {
   .hero__title {
     font-size: 26px;
     line-height: 1.6153846154;
+    letter-spacing: 0.06em;
   }
 }
 @media screen and (min-width: 1200px) {
