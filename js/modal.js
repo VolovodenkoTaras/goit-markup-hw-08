@@ -3,6 +3,7 @@
         openModalBtn: document.querySelector("[data-modal-open]"),
         closeModalBtn: document.querySelector("[data-modal-close]"),
         modal: document.querySelector("[data-modal]"),
+        // body: document.querySelector('#body'),
     };
 
     refs.openModalBtn.addEventListener("click", toggleModal);
@@ -11,5 +12,17 @@
     function toggleModal() {
         document.body.classList.toggle("modal-open");
         refs.modal.classList.toggle("is-hidden");
+        // refs.body.classList.toggle('no-scroll');
     }
 })();
+
+
+// document.addEventListener('DOMContentLoaded', function () {
+//     let $btn = document.querySelector('.modal-open');
+//     let $input = document.querySelector('#user-name');
+//     $btn.addEventListener('click', function () {
+//         setTimeout(function () {
+//             $input.focus();
+//         }, 100);
+//     });
+// });

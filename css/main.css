@@ -30,6 +30,11 @@ body {
 body.modal-open {
   overflow: hidden;
 }
+@media screen and (min-width: 1200px) {
+  body.modal-open {
+    padding-right: 15px;
+  }
+}
 
 /*Частичный сброс стилей начало*/
 p,
@@ -38,7 +43,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+strong {
   margin: 0;
 }
 
@@ -827,12 +833,18 @@ img {
 .hero__title {
   color: #ffffff;
   font-weight: 900;
-  font-size: 26px;
-  line-height: 1.6153846154;
-  letter-spacing: 0.06em;
+  font-size: 20px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 30px;
+}
+@media screen and (min-width: 480px) {
+  .hero__title {
+    font-size: 26px;
+    line-height: 1.6153846154;
+  }
 }
 @media screen and (min-width: 1200px) {
   .hero__title {
@@ -1191,11 +1203,6 @@ img {
           box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-input[type=radio] {
-  position: absolute;
-  left: -9999px;
-}
-
 [value=Все]:checked ~ .filter [for=Все],
 [value=Веб-сайт]:checked ~ .filter [for=Веб-сайт],
 [value=Приложение]:checked ~ .filter [for=Приложение],
@@ -1270,6 +1277,7 @@ input[type=radio] {
   padding: 20px 24px;
   border: 1px solid #eeeeee;
   border-top: 0;
+  bottom: 0;
 }
 .projects__title {
   color: #212121;
@@ -1628,6 +1636,7 @@ input[type=radio] {
   }
 }
 .order__title {
+  display: inline-block;
   font-size: 20px;
   line-height: 1.5;
   color: #212121;
@@ -1792,4 +1801,5 @@ input[type=radio] {
           text-decoration-color: #2196f3;
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
+  text-underline-position: under;
 }/*# sourceMappingURL=main.css.map */

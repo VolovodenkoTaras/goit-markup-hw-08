@@ -25,7 +25,7 @@
 
     
     &__button {
-       display: inline-block;
+        display: inline-block;
         color: $title-text-color;
         background-color: $second-grey-color;
     
@@ -61,10 +61,10 @@
 
 // Фильтрация по кнопкам в портфолию
 
-input[type="radio"] {
-  position: absolute;
-  left: -9999px;
-}
+// input[type="radio"] {
+//   position: absolute;
+//   left: -9999px;
+// }
 
 [value="Все"]:checked~.filter [for="Все"],
 [value="Веб-сайт"]:checked~.filter [for="Веб-сайт"],

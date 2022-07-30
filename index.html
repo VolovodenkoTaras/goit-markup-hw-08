@@ -102,7 +102,6 @@
               <!-- <br /> -->
               для&nbsp;вашего&nbsp;бизнеса
             </h1>
-
             <button class="button" type="button" data-modal-open>Заказать услугу</button>
           </div>
         </div>
@@ -688,11 +687,11 @@
         </button>
 
         <form class="order" autocomplete="off">
-          <h2 class="order__title">Оставьте свои данные, мы вам перезвоним</h2>
+          <strong class="order__title">Оставьте свои данные, мы вам перезвоним</strong>
 
           <label class="order__label" for="person">
             Имя
-            <input class="order__input" type="text" name="user-name" id="person" />
+            <input class="order__input" type="text" name="user-name" id="person" autofocus />
             <svg class="order__icon">
               <use href="./images/icons.svg#modal-person"></use>
             </svg>
@@ -751,17 +750,17 @@
     </div>
 
     <!-- Скрипт модального окна:  -->
-    <script src="./js/modal.js"></script>
+    <script src="./js/modal.js" type="module"></script>
 
     <!-- Скрипт мобильного меню:  -->
-    <script src="./js/mobile-menu.js"></script>
+    <script src="./js/mobile-menu.js" type="module"></script>
 
     <!-- Скрипт скролла закрепленного хэдэра:  -->
-    <script src="./js/header-scroll.js"></script>
+    <script src="./js/header-scroll.js" type="module"></script>
 
     <!-- AOS aniamtion library -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="./js/animations.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" type="module"></script>
+    <script src="./js/animations.js" type="module"></script>
 
     <!-- <script src="./js/agreement.js"></script> -->
 

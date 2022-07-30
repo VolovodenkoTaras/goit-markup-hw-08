@@ -8,6 +8,10 @@ body {
 
     &.modal-open {
         overflow: hidden;
+        @media screen and (min-width:$desktop) {
+                padding-right: 15px;
+            }
+        
     }
 }
 
@@ -18,7 +22,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+strong {
     margin: 0;
 }
 
