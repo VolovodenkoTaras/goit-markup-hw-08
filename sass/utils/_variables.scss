@@ -27,8 +27,3 @@ $transition-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 $indent: 30px;
 // flex-basis: calc((100% - $indent * ($item - 1)) / $item);
-$flex-basis-item1: calc((100% - $indent * (1 - 1)) / 1);
-$flex-basis-item2: calc((100% - $indent * (2 - 1)) / 2);
-$flex-basis-item3: calc((100% - $indent * (3 - 1)) / 3);
-$flex-basis-item4: calc((100% - $indent * (4 - 1)) / 4);
-$flex-basis-item6: calc((100% - $indent * (6 - 1)) / 6);

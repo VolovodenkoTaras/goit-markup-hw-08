@@ -12,15 +12,15 @@
 &__item {
 
     @media screen and (min-width:$mobile) {
-        flex-basis: $flex-basis-item1;
+        @include flex-basis($indent, 1)
     }
 
     @media screen and (min-width:$tablet) {
-        flex-basis: $flex-basis-item2;
+        @include flex-basis($indent, 2)
     }
 
     @media screen and (min-width:$desktop) {
-        flex-basis: $flex-basis-item4;
+        @include flex-basis($indent, 4)
     }
 }
 

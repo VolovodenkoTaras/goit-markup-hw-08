@@ -12,19 +12,19 @@
         &__item {
 
             @media screen and (max-width:($mobile - 1px)) {
-                flex-basis: $flex-basis-item1;
+                @include flex-basis($indent, 1)
             }
 
             @media screen and (min-width:$mobile) {
-                flex-basis: $flex-basis-item2;
+                @include flex-basis($indent, 2)
             }
 
             @media screen and (min-width:$tablet) {
-                flex-basis: $flex-basis-item3;
+                @include flex-basis($indent, 3)
             }
     
             @media screen and (min-width:$desktop) {
-                flex-basis: $flex-basis-item6;
+                @include flex-basis($indent, 6)
             }
     
             @include transition(box-shadow);

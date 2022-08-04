@@ -1,3 +1,5 @@
+@import './decimals';
+
 @mixin transition(
     $property: color,
     $time: $transition-duration, 
@@ -16,3 +18,19 @@
     justify-content: $justify-content;
     align-items: $align-items;
    }
+
+   @mixin section($padding: 60px) {
+       padding-top: $padding;
+       padding-bottom: $padding;
+   }
+
+   @mixin fonts($fs, $lh, $fw: 400, $ls: 0.03em) {
+       font-weight: $fw;
+       font-size: $fs;
+       line-height: decimal-round($lh / $fs);
+       letter-spacing: $ls;
+   }
+
+    @mixin flex-basis($indent,$item) {
+      flex-basis: calc((100% - #{$indent} * (#{$item} - 1)) / #{$item});
+     }
