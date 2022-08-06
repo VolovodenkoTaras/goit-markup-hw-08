@@ -36,6 +36,36 @@ body.modal-open {
   }
 }
 
+/*Липкий футер начало*/
+html,
+body {
+  height: 100%;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.page-header,
+.main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+}
+
+.page-footer {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+/*Липкий футер конец*/
 /*Частичный сброс стилей начало*/
 p,
 h1,
@@ -361,13 +391,9 @@ img {
             transform: translateY(5px);
   }
 }
-/**
-  |============================
-  | fixed element
-  |============================
-*/
+/*Кнопка прокрутки вверх*/
 @media screen and (max-width: 767px) {
-  .no-transparency .scroll {
+  .no-transparency.scroll {
     position: fixed;
     bottom: 40px;
     right: 20px;
@@ -389,8 +415,14 @@ img {
     -webkit-animation: slide-top 1s linear 2s infinite alternate both;
             animation: slide-top 1s linear 2s infinite alternate both;
   }
-  .no-transparency .scroll__arrow {
-    fill: #ffffff;
+}
+
+.scroll {
+  fill: #ffffff;
+}
+@media screen and (min-width: 768px) {
+  .scroll {
+    display: none;
   }
 }
 

@@ -1,9 +1,5 @@
-/**
-  |============================
-  | fixed element
-  |============================
-*/
- .no-transparency .scroll {
+/*Кнопка прокрутки вверх*/
+ .no-transparency.scroll {
      
   @media screen and (max-width:($tablet - 1px)) {
             position: fixed;
@@ -22,11 +18,16 @@
             cursor: pointer;
           
             animation: slide-top 1s linear 2s infinite alternate both;
-          
-            &__arrow {
-              fill: $primary-white-color;
-            }
          }
 
     
+}
+
+
+.scroll {
+  fill: $primary-white-color;
+
+  @media screen and (min-width:($tablet)) {
+    display: none;
+  }
 }

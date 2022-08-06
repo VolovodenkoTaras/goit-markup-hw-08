@@ -5,7 +5,7 @@ body {
     letter-spacing: 0.03em;
     font-size: 14px;
     line-height: calc(16.41 / 14);
-
+ 
     &.modal-open {
         overflow: hidden;
         @media screen and (min-width:$desktop) {
@@ -14,6 +14,28 @@ body {
         
     }
 }
+
+/*Липкий футер начало*/
+html,
+body {
+    height: 100%;
+}
+
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.page-header,
+.main {
+    flex: 1 0 auto;
+}
+
+.page-footer {
+    flex-shrink: 0;
+}
+/*Липкий футер конец*/
 
 /*Частичный сброс стилей начало*/
 p,
@@ -38,8 +60,6 @@ ul,ol {
     padding: 0;
 }
 /*Частичный сброс стилей конец*/
-
-
 
 /* Не растягивать комментарии пользователем*/
 textarea {
