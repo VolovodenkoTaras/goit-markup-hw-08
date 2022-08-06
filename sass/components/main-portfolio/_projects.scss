@@ -17,21 +17,25 @@
     }
 
     &__item {
-        @media screen and (min-width:$tablet) {
-            @include flex-basis($indent, 2)
+           @media screen and (min-width:$tablet) {
+            @include flex-basis($indent, 2);
         }
-         
-         @media screen and (min-width:$desktop) {
-            @include flex-basis($indent, 3)
+           @media screen and (min-width:$desktop) {
+            @include flex-basis($indent, 3);
         }
 
-            @include transition(box-shadow);
+        @include transition(box-shadow);
         }
 
     &__item:hover,
     &__item:focus {
         box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
             1px 4px 6px rgba(0, 0, 0, 0.16);
+        }
+        
+    &__link {
+        display: flex;
+        flex-direction: column;
         }
 
     &__box {
@@ -44,6 +48,8 @@
         border: 1px solid $portfolio-project-border;
         border-top: 0;
         bottom: 0;
+
+        flex-grow: 1;
         }
     
     &__title {
