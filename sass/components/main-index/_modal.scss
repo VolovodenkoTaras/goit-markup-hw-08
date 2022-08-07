@@ -152,7 +152,7 @@
     &__icon {
         position: absolute;
         top: 65%;
-        left: 12px;
+        left: 15px;
         transform: translateY(-50%);
     
         fill: $title-text-color;
@@ -214,8 +214,10 @@
         @extend %visually-hidden;
         }
     
-    &__icon-checkbox {
-        fill: $primary-white-color;
+    &__checkbox-custom {
+        @include centered-flex();
+
+        background-color: $primary-white-color;
         width: 16px;
         height: 15px;
     
@@ -224,15 +226,20 @@
         border-radius: 1px;
         border: 2px solid $title-text-color;
         
-        transition: fill $transition-duration $transition-function,
+        transition: background-color $transition-duration $transition-function,
         border $transition-duration $transition-function;
         }
     
 /* При клике на чекбоксе меняет иконку */
-    &__checkbox:checked+&__icon-checkbox {
-    fill: $accent-color;
-    border: none;
-        }   
+    &__checkbox:checked + &__checkbox-custom {
+    background-color: $accent-color;
+    border:0;
+  }
+
+    &__checkbox:hover + &__checkbox-custom,
+    &__checkbox:focus + &__checkbox-custom {
+    border-color: $accent-color;
+  }    
         
     &__text,
     &__link {
@@ -250,10 +257,6 @@
             }
         }
 
-    // &__text {
-    //     margin-right: 5px;
-    //     }        
- 
     &__link {
         color: $accent-color;
         text-decoration-color: $accent-color;

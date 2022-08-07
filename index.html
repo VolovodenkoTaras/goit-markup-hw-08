@@ -761,12 +761,13 @@
               name="policy"
               id="policy"
               data-modal-checkbox
-              checked
             />
 
-            <svg class="order__icon-checkbox">
-              <use href="./images/icons.svg#agreement-yes"></use>
-            </svg>
+            <span class="order__checkbox-custom">
+              <svg class="order__checkbox-icon" width="16" height="15">
+                <use href="./images/icons.svg#agreement-yes"></use>
+              </svg>
+            </span>
 
             <span class="order__text">
               Соглашаюсь с рассылкой и принимаю
@@ -774,7 +775,7 @@
             </span>
           </label>
 
-          <button class="button" type="submit" disabled="false" data-submit-btn>Отправить</button>
+          <button class="button" type="submit" disabled="true" data-submit-btn>Отправить</button>
         </form>
       </div>
     </div>

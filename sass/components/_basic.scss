@@ -9,7 +9,10 @@ body {
     &.modal-open,
     &.mobile-menu-open
      {
+        @media screen and (max-width:($tablet - 1px)) {
         overflow: hidden;
+        }
+        
         @media screen and (min-width:$desktop) {
                 padding-right: 15px;
             }
