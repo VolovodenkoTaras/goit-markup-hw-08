@@ -16,13 +16,3 @@
     }
 })();
 
-
-// document.addEventListener('DOMContentLoaded', function () {
-//     let $btn = document.querySelector('.modal-open');
-//     let $input = document.querySelector('#user-name');
-//     $btn.addEventListener('click', function () {
-//         setTimeout(function () {
-//             $input.focus();
-//         }, 100);
-//     });
-// });

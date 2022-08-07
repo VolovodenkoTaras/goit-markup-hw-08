@@ -27,11 +27,11 @@ body {
   font-size: 14px;
   line-height: 1.1721428571;
 }
-body.modal-open {
+body.modal-open, body.mobile-menu-open {
   overflow: hidden;
 }
 @media screen and (min-width: 1200px) {
-  body.modal-open {
+  body.modal-open, body.mobile-menu-open {
     padding-right: 15px;
   }
 }
@@ -51,13 +51,16 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  overflow: hidden;
 }
 
 .page-header,
 .main {
   -webkit-box-flex: 1;
-      -ms-flex: 1 0 auto;
-          flex: 1 0 auto;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
 .page-footer {

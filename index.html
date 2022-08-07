@@ -755,7 +755,14 @@
           </label>
 
           <label class="order__agreement" for="policy">
-            <input class="order__checkbox" type="checkbox" name="policy" id="policy" />
+            <input
+              class="order__checkbox"
+              type="checkbox"
+              name="policy"
+              id="policy"
+              data-modal-checkbox
+              checked
+            />
 
             <svg class="order__icon-checkbox">
               <use href="./images/icons.svg#agreement-yes"></use>
@@ -767,7 +774,7 @@
             </span>
           </label>
 
-          <button class="button" type="submit">Отправить</button>
+          <button class="button" type="submit" disabled="false" data-submit-btn>Отправить</button>
         </form>
       </div>
     </div>
@@ -781,6 +788,7 @@
 
     <!-- Скрипт модального окна:  -->
     <script src="./js/modal.js" type="module"></script>
+    <script src="./js/agreement.js" type="module"></script>
 
     <!-- Скрипт мобильного меню:  -->
     <script src="./js/mobile-menu.js" type="module"></script>
@@ -791,8 +799,6 @@
     <!-- AOS aniamtion library -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./js/animations.js"></script>
-
-    <!-- <script src="./js/agreement.js"></script> -->
 
     <!-- Скрипт для просмотра данных отправки в "console" без перезагрузки страницы: ЗАКОМЕНТИРОВАТЬ!!! -->
     <!-- <script>
