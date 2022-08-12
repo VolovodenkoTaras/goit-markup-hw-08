@@ -4,9 +4,17 @@
     @extend %list;
 
     @media screen and (min-width:$tablet) {
-        display: flex;
-        flex-wrap: wrap; 
-        gap: $indent;
+        // display: flex;
+        // flex-wrap: wrap; 
+        // gap: $indent;
+
+        display: grid;
+        grid-gap: $indent;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (min-width:$desktop) {
+        grid-template-columns: repeat(3, 1fr);
     }
 
 
@@ -17,12 +25,12 @@
     }
 
     &__item {
-           @media screen and (min-width:$tablet) {
-            @include flex-basis($indent, 2);
-        }
-           @media screen and (min-width:$desktop) {
-            @include flex-basis($indent, 3);
-        }
+        //    @media screen and (min-width:$tablet) {
+        //     @include flex-basis($indent, 2);
+        // }
+        //    @media screen and (min-width:$desktop) {
+        //     @include flex-basis($indent, 3);
+        // }
 
         @include transition(box-shadow);
         }

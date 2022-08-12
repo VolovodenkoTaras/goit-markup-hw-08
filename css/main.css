@@ -178,8 +178,14 @@ img {
   font-family: Raleway, sans-serif;
   font-weight: 700;
   font-size: 24px;
-  line-height: 1.375;
+  line-height: 1.1666666667;
   text-decoration: none;
+}
+@media screen and (max-width: 767px) {
+  .logo {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .logo {
@@ -841,14 +847,15 @@ img {
   margin-left: auto;
   margin-right: auto;
   background-color: #2f303a;
-  /*линейный градиент, под ним изображение*/
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero480@1x-min.jpg");
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero480@1x-min.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   text-align: center;
   padding: 118px 0;
+  /*линейный градиент, под ним изображение*/
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), image-set(url("../images/hero480@2x-min.jpg") 2x, url("../images/hero480@1x-min.jpg") 1x);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), -webkit-image-set(url("../images/hero480@2x-min.jpg") 2x, url("../images/hero480@1x-min.jpg") 1x);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), image-set(url("../images/hero480@2x-min.jpg") 2x, url("../images/hero480@1x-min.jpg") 1x);
 }
 @media screen and (min-width: 768px) {
   .hero {
@@ -894,12 +901,6 @@ img {
   }
 }
 
-@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-  .hero {
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero480@2x-min.jpg");
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero480@2x-min.jpg");
-  }
-}
 @media screen and (min-width: 481px) and (max-width: 768px) {
   .hero {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero768@1x-min.jpg");
@@ -1271,12 +1272,14 @@ img {
 /* Список портфолио */
 @media screen and (min-width: 768px) {
   .projects {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    gap: 30px;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .projects {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 @media screen and (max-width: 767px) {
@@ -1293,18 +1296,6 @@ img {
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-@media screen and (min-width: 768px) {
-  .projects__item {
-    -ms-flex-preferred-size: calc((100% - 30px * (2 - 1)) / 2);
-        flex-basis: calc((100% - 30px * (2 - 1)) / 2);
-  }
-}
-@media screen and (min-width: 1200px) {
-  .projects__item {
-    -ms-flex-preferred-size: calc((100% - 30px * (3 - 1)) / 3);
-        flex-basis: calc((100% - 30px * (3 - 1)) / 3);
-  }
 }
 .projects__item:hover, .projects__item:focus {
   -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
