@@ -7,17 +7,26 @@ body {
     line-height: calc(16.41 / 14);
 
     &.mobile-menu-open {
-        @media screen and (max-width:($tablet - 1px)) {
+        // @media screen and (max-width:($tablet - 1px)) {
+        // overflow: hidden;
+        // }
+
+        @include media-query(mobile-only) {
         overflow: hidden;
-        }
+       }
+
     }
         
     &.modal-open {   
         overflow: hidden;
 
-        @media screen and (min-width:$desktop) {
-                padding-right: 15px;
-            }
+        // @media screen and (min-width:$desktop) {
+        //         padding-right: 15px;
+        //     }
+
+        @include media-query(desktop) {
+        padding-right: 15px;
+       }    
     }
 }
 
@@ -93,15 +102,24 @@ img {
     padding-top: 60px;
     padding-bottom: 60px;
 
-        @media screen and (min-width:$desktop) {
+        // @media screen and (min-width:$desktop) {
+        //     padding-top: 94px;
+        //     padding-bottom: 94px; 
+        // }
+
+        @include media-query(desktop) {
             padding-top: 94px;
-            padding-bottom: 94px; 
-        }
+            padding-bottom: 94px;
+       }
 
     &--no-padding-bottom {
-        @media screen and (min-width:$desktop) {
+        // @media screen and (min-width:$desktop) {
+        //     padding-bottom: 0;
+        //     }
+        
+        @include media-query(desktop) {
             padding-bottom: 0;
-            }
+       }    
     }
 
     &--bc-grey {
@@ -119,11 +137,17 @@ img {
     margin-top: 0;
     margin-bottom: 30px;
 
-        @media screen and (min-width:$desktop) {
-            font-size: 36px;
-            line-height: calc(42.19 / 36);  
-            margin-bottom: 50px;
-        }
+        // @media screen and (min-width:$desktop) {
+        //     font-size: 36px;
+        //     line-height: calc(42.19 / 36);  
+        //     margin-bottom: 50px;
+        // }
+
+       @include media-query(desktop) {
+        font-size: 36px;
+        line-height: calc(42.19 / 36);
+        margin-bottom: 50px;
+       }
 
     }
 
@@ -136,18 +160,23 @@ img {
     margin-left: auto;
     margin-right: auto; 
 
-    // max-width: 1200px;
+    //     @media screen and (min-width:$mobile) {
+    //     width: $mobile;
+    // }
+    //     @media screen and (min-width:$tablet) {
+    //     width: $tablet;
+    // }
+    //     @media screen and (min-width:$desktop) {
+    //     width: $desktop;
+    // }
 
-        @media screen and (min-width:$mobile) {
+        @include media-query(mobile) {
         width: $mobile;
-    }
-
-        @media screen and (min-width:$tablet) {
+       }
+       @include media-query(tablet) {
         width: $tablet;
-    }
-
-        @media screen and (min-width:$desktop) {
+       }
+       @include media-query(desktop) {
         width: $desktop;
-    }
-
+       }
 }
