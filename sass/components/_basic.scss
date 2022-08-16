@@ -11,7 +11,7 @@ body {
         // overflow: hidden;
         // }
 
-        @include media-query(mobile-only) {
+        @include media-query(tablet-less) {
         overflow: hidden;
        }
 

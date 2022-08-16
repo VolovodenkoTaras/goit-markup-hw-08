@@ -1,7 +1,7 @@
 /*Кнопка прокрутки вверх*/
  .no-transparency.scroll {
      
-  @media screen and (max-width:($tablet - 1px)) {
+  @include media-query(tablet-less) {
             position: fixed;
             bottom: 40px;
             right: 20px;

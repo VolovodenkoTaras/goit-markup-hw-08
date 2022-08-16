@@ -1,10 +1,10 @@
 .subscription {
 
-    @media screen and (min-width:$tablet) and (max-width:($desktop - 1px)) {
+    @include media-query(tablet-only) {
             margin-top: 60px;
         }
 
-    @media screen and (min-width:$desktop) {
+    @include media-query(desktop) {
             padding-top: 15px;
         }
 
@@ -17,7 +17,7 @@
         }
 
     &__box {
-        @media screen and (min-width:$desktop) {
+        @include media-query(desktop){
                 @include centered-flex();
             }
         
@@ -39,16 +39,16 @@
 
         margin-bottom: 20px;
     
-        @media screen and (max-width:($mobile - 1px)) {
+       @include media-query(mobile-less) {
             display: block;
             width: 100%;
             }
 
-        @media screen and (min-width:$mobile) and (max-width:($desktop - 1px)) {
+        @include media-query(mobile) {
             width: 450px;
         }    
 
-        @media screen and (min-width:$desktop) {
+        @include media-query(desktop) {
             width: 358px;
             margin-right: 12px;
             margin-bottom: 0;

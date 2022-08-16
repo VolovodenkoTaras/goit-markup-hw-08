@@ -1,10 +1,10 @@
 .join {
 
-    @media screen and (max-width:($tablet - 1px)) {
+    @include media-query(tablet-less) {
             margin-bottom: 60px;
         }
     
-    @media screen and (min-width:$desktop) {
+    @include media-query(desktop) {
             padding-top: 15px;
             margin-right: 93px;
         }

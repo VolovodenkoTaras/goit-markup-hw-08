@@ -181,7 +181,7 @@ img {
   line-height: 1.1666666667;
   text-decoration: none;
 }
-@media screen and (max-width: 767px) {
+@media (max-width: 767.98px) {
   .logo {
     padding-top: 16px;
     padding-bottom: 16px;
@@ -406,7 +406,7 @@ img {
   }
 }
 /*Кнопка прокрутки вверх*/
-@media screen and (max-width: 767px) {
+@media (max-width: 767.98px) {
   .no-transparency.scroll {
     position: fixed;
     bottom: 40px;
@@ -859,6 +859,20 @@ img {
 }
 @media screen and (min-width: 768px) {
   .hero {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), image-set(url("../images/hero768@2x-min.jpg") 2x, url("../images/hero768@1x-min.jpg") 1x);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), -webkit-image-set(url("../images/hero768@2x-min.jpg") 2x, url("../images/hero768@1x-min.jpg") 1x);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), image-set(url("../images/hero768@2x-min.jpg") 2x, url("../images/hero768@1x-min.jpg") 1x);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), image-set(url("../images/hero1200@2x-min.jpg") 2x, url("../images/hero1200@1x-min.jpg") 1x);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), -webkit-image-set(url("../images/hero1200@2x-min.jpg") 2x, url("../images/hero1200@1x-min.jpg") 1x);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), image-set(url("../images/hero1200@2x-min.jpg") 2x, url("../images/hero1200@1x-min.jpg") 1x);
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero {
     margin-top: 80px;
   }
 }
@@ -901,30 +915,6 @@ img {
   }
 }
 
-@media screen and (min-width: 481px) and (max-width: 768px) {
-  .hero {
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero768@1x-min.jpg");
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero768@1x-min.jpg");
-  }
-}
-@media screen and (min-width: 481px) and (max-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 481px) and (max-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 481px) and (max-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 481px) and (max-width: 768px) and (min-resolution: 2dppx) {
-  .hero {
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero768@2x-min.jpg");
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero768@2x-min.jpg");
-  }
-}
-@media screen and (min-width: 769px) {
-  .hero {
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero1200@1x-min.jpg");
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero1200@1x-min.jpg");
-  }
-}
-@media screen and (min-width: 769px) and (min-device-pixel-ratio: 2), screen and (min-width: 769px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 769px) and (min-resolution: 192dpi), screen and (min-width: 769px) and (min-resolution: 2dppx) {
-  .hero {
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero1200@2x-min.jpg");
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero1200@2x-min.jpg");
-  }
-}
 /* Особенности*/
 .features {
   display: -webkit-box;
@@ -1000,7 +990,7 @@ img {
 }
 
 /* Чем мы занимаемся */
-@media screen and (max-width: 1199px) {
+@media (max-width: 1199.98px) {
   .work {
     display: none;
   }
@@ -1139,7 +1129,7 @@ img {
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-@media screen and (max-width: 479px) {
+@media (max-width: 479.98px) {
   .clients__item {
     -ms-flex-preferred-size: calc((100% - 30px * (1 - 1)) / 1);
         flex-basis: calc((100% - 30px * (1 - 1)) / 1);
@@ -1198,7 +1188,10 @@ img {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 8px;
+  -webkit-column-gap: 8px;
+     -moz-column-gap: 8px;
+          column-gap: 8px;
+  row-gap: 15px;
   margin-bottom: 40px;
 }
 @media screen and (min-width: 768px) {
@@ -1282,7 +1275,7 @@ img {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-@media screen and (max-width: 767px) {
+@media (max-width: 767.98px) {
   .projects__item:not(:last-child) {
     margin-bottom: 30px;
   }
@@ -1410,7 +1403,7 @@ img {
   }
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767.98px) {
   .about {
     margin-bottom: 60px;
   }
@@ -1454,7 +1447,7 @@ img {
 .join {
   /* Социальные сети студии */
 }
-@media screen and (max-width: 767px) {
+@media (max-width: 767.98px) {
   .join {
     margin-bottom: 60px;
   }
@@ -1479,7 +1472,7 @@ img {
   background-color: #2196f3;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media (min-width: 768px) and (max-width: 1199.98px) {
   .subscription {
     margin-top: 60px;
   }
@@ -1520,13 +1513,13 @@ img {
   padding: 15px 16px;
   margin-bottom: 20px;
 }
-@media screen and (max-width: 479px) {
+@media (max-width: 479.98px) {
   .subscription__input {
     display: block;
     width: 100%;
   }
 }
-@media screen and (min-width: 480px) and (max-width: 1199px) {
+@media screen and (min-width: 480px) {
   .subscription__input {
     width: 450px;
   }
@@ -1598,6 +1591,7 @@ img {
 
 .modal {
   width: 100%;
+  padding: 40px;
   background-color: #ffffff;
   border-radius: 4px;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -1617,12 +1611,6 @@ img {
     max-height: 609px;
     -webkit-transform: translate(-50%, -50%) scale(1);
             transform: translate(-50%, -50%) scale(1);
-  }
-}
-@media screen and (min-width: 1200px) {
-  .modal {
-    max-width: 528px;
-    max-height: 581px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1671,7 +1659,6 @@ img {
   max-width: 450px;
   margin-left: auto;
   margin-right: auto;
-  padding: 40px;
   /* При клике на чекбоксе меняет иконку */
 }
 @media screen and (min-width: 1200px) {
@@ -1680,7 +1667,7 @@ img {
   }
 }
 .order__title {
-  display: inline-block;
+  display: block;
   font-size: 20px;
   line-height: 1.5;
   color: #212121;
@@ -1692,7 +1679,18 @@ img {
     line-height: 1.172;
   }
 }
-.order__label {
+.order__group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.order__field {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1701,17 +1699,17 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+.order__label {
   font-weight: 400;
   font-size: 12px;
   line-height: 1.1716666667;
   letter-spacing: 0.01em;
-  margin-bottom: 10px;
+  margin-bottom: 4px;
 }
 .order__input {
-  display: block;
   width: 100%;
-  margin: 4px 0px 0px 0px;
-  padding: 12px 42px;
+  padding: 11px 42px;
   border-radius: 4px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   font: inherit;
@@ -1731,7 +1729,7 @@ img {
 .order__icon {
   position: absolute;
   top: 65%;
-  left: 15px;
+  left: 12px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   fill: #212121;
@@ -1744,7 +1742,10 @@ img {
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.order__label:focus-within > .order__icon {
+.order__icon:hover, .order__icon:focus {
+  fill: #2196f3;
+}
+.order__input:focus-within + .order__icon, .order__input:hover + .order__icon {
   fill: #2196f3;
 }
 .order__commentary {
@@ -1840,7 +1841,7 @@ img {
   line-height: 1.1716666667;
   letter-spacing: 0.03em;
 }
-@media screen and (min-width: 479px) {
+@media screen and (min-width: 480px) {
   .order__text, .order__link {
     white-space: nowrap;
   }

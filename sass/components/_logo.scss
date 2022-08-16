@@ -10,12 +10,12 @@
     
     text-decoration: none;
 
-    @media screen and (max-width:($tablet - 1px)) {
+    @include media-query(tablet-less) {
             padding-top: 16px;
             padding-bottom: 16px;
         }
 
-     @media screen and (min-width:$desktop) {
+    @include media-query(desktop) {
             font-size: 26px;
             line-height: calc(35.96 / 26);
         }
@@ -28,5 +28,3 @@
         color: $primary-white-color;
         }
 }
-
-//test

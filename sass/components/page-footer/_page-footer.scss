@@ -6,12 +6,12 @@
    &__content {
         text-align: center;
 
-            @media screen and (min-width:$tablet) {
+            @include media-query(tablet) {
                     display: flex;
                     flex-wrap: wrap;
                     justify-content: center;
                 }
-            @media screen and (min-width:$desktop) {
+            @include media-query(desktop) {
                     text-align: left;
                 }            
        

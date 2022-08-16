@@ -11,15 +11,15 @@
 
     &__item {
 
-            @media screen and (min-width:$mobile) {
+            @include media-query(mobile) {
                 @include flex-basis($indent, 1)
             }
 
-            @media screen and (min-width:$tablet) {
+            @include media-query(tablet) {
                 @include flex-basis($indent, 2)
             }
     
-            @media screen and (min-width:$desktop) {
+            @include media-query(desktop) {
                 @include flex-basis($indent, 4)
             }
         }

@@ -22,21 +22,34 @@
     //                 url('../images/hero480@2x-min.jpg');
     //      }
 
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
         image-set( 
             url('../images/hero480@2x-min.jpg') 2x,
             url('../images/hero480@1x-min.jpg') 1x
         );
+          
+                @include media-query(tablet) {
+                    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+                    image-set(
+                        url('../images/hero768@2x-min.jpg') 2x,
+                        url('../images/hero768@1x-min.jpg') 1x);
+                }
 
+                @include media-query(desktop) {
+                    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+                    image-set(
+                        url('../images/hero1200@2x-min.jpg') 2x,
+                        url('../images/hero1200@1x-min.jpg') 1x);
+                }
    
 
     //    Закрепленный хэдэр
-    @media screen and (min-width:$tablet) {
+        @include media-query(tablet) {
             margin-top: 80px;
         }
     //    Закрепленный хэдэр    
 
-    @media screen and (min-width:$desktop) {
+        @include media-query(desktop) {
             padding: 200px 0;
         }
 
@@ -45,7 +58,7 @@
         margin-left: auto;
         margin-right: auto;
 
-        @media screen and (min-width:$desktop) {
+        @include media-query(desktop) {
                 max-width: 696px;
             }
     }   
@@ -61,13 +74,13 @@
             margin-top: 0;
             margin-bottom: 30px;
 
-            @media screen and (min-width:$mobile) {
+            @include media-query(mobile) {
             font-size: 26px;
             line-height: calc(42 / 26);
             letter-spacing: 0.06em;
             }
 
-            @media screen and (min-width:$desktop) {
+            @include media-query(desktop) {
             font-size: 44px;
             line-height: calc(60 / 44);
             }
@@ -77,34 +90,34 @@
 
 
 
-@media screen and (min-width:($mobile + 1px)) and (max-width:($tablet)) {
-  .hero {
-        background-image:linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-         url('../images/hero768@1x-min.jpg');
-        }
+// @media screen and (min-width:($mobile + 1px)) and (max-width:($tablet)) {
+//   .hero {
+//         background-image:linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+//          url('../images/hero768@1x-min.jpg');
+//         }
 
-    @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    .hero {
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url('../images/hero768@2x-min.jpg');
-    }
-}    
-}
+//     @media (min-device-pixel-ratio: 2),
+//     (min-resolution: 192dpi),
+//     (min-resolution: 2dppx) {
+//     .hero {
+//     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+//     url('../images/hero768@2x-min.jpg');
+//     }
+// }    
+// }
 
-@media screen and (min-width:($tablet + 1px)) {
-    .hero {
-        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-            url('../images/hero1200@1x-min.jpg');
-    }
+// @media screen and (min-width:($tablet + 1px)) {
+//     .hero {
+//         background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+//             url('../images/hero1200@1x-min.jpg');
+//     }
 
-    @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-        .hero {
-            background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-                url('../images/hero1200@2x-min.jpg');
-        }
-    }
-}
+//     @media (min-device-pixel-ratio: 2),
+//     (min-resolution: 192dpi),
+//     (min-resolution: 2dppx) {
+//         .hero {
+//             background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+//                 url('../images/hero1200@2x-min.jpg');
+//         }
+//     }
+// }

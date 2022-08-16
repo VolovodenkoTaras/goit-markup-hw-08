@@ -38,12 +38,17 @@
 
 @mixin media-query($range) {
 
+    @if $range==mobile-less {
+        @media (max-width:#{$mobile - 0.02}) {
+            @content;
+        }
+    }
     @if $range==mobile {
         @media screen and (min-width: $mobile) {
             @content;
         }
     }
-    @if $range==mobile-only {
+    @if $range==tablet-less {
         @media (max-width:#{$tablet - 0.02}) {
             @content;
         }
@@ -63,7 +68,7 @@
             @content;
         }
     }
-    @if $range==noDeskop {
+    @if $range==desktop-less {
         @media (max-width:#{$desktop - 0.02}) {
             @content;
         }

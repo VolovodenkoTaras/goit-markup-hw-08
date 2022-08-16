@@ -3,7 +3,7 @@
 .projects {
     @extend %list;
 
-    @media screen and (min-width:$tablet) {
+    @include media-query(tablet) {
         // display: flex;
         // flex-wrap: wrap; 
         // gap: $indent;
@@ -13,13 +13,12 @@
         grid-template-columns: repeat(2, 1fr);
     }
 
-    @media screen and (min-width:$desktop) {
+    @include media-query(desktop) {
         grid-template-columns: repeat(3, 1fr);
     }
 
-
     &__item:not(:last-child) {
-        @media screen and (max-width:calc($tablet - 1px)) {
+        @include media-query(tablet-less) {
             margin-bottom: 30px;
         }
     }
@@ -100,17 +99,17 @@
     
             padding: 30px 24px;
 
-            @media screen and (min-width:$mobile) {
+            @include media-query(mobile) {
                     font-size: 18px;
                     line-height: calc(28 / 18);      
                     padding: 77px 24px;
                 }
 
-            @media screen and (min-width:$tablet) {
+            @include media-query(tablet){
                     padding: 49px 24px;
                 }
                 
-            @media screen and (min-width:$desktop) {
+            @include media-query(desktop) {
                     padding: 63px 24px;
                 }    
         }

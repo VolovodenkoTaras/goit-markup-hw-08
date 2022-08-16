@@ -1,13 +1,13 @@
 .about {
-    @media screen and (max-width:($tablet - 1px)) {
+    @include media-query(tablet-less) {
             margin-bottom: 60px;
         }
 
-    @media screen and (min-width:$tablet) {
+    @include media-query(tablet) {
             margin-right: 165px;
         }        
 
-    @media screen and (min-width:$desktop) {
+    @include media-query(desktop) {
             margin-right: 70px;
         }
     

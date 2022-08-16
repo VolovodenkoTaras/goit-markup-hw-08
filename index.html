@@ -720,39 +720,40 @@
 
         <form class="order" autocomplete="off">
           <strong class="order__title">Оставьте свои данные, мы вам перезвоним</strong>
+          <div class="order__group" role="group">
+            <label class="order__field" for="person">
+              <span class="order__label">Имя</span>
+              <input class="order__input" type="text" name="user-name" id="person" autofocus />
+              <svg class="order__icon">
+                <use href="./images/icons.svg#modal-person"></use>
+              </svg>
+            </label>
 
-          <label class="order__label" for="person">
-            Имя
-            <input class="order__input" type="text" name="user-name" id="person" autofocus />
-            <svg class="order__icon">
-              <use href="./images/icons.svg#modal-person"></use>
-            </svg>
-          </label>
+            <label class="order__field" for="phone">
+              <span class="order__label">Телефон</span>
+              <input class="order__input" type="tel" name="phone" id="phone" />
+              <svg class="order__icon">
+                <use href="./images/icons.svg#modal-phone"></use>
+              </svg>
+            </label>
 
-          <label class="order__label" for="phone">
-            Телефон
-            <input class="order__input" type="tel" name="phone" id="phone" />
-            <svg class="order__icon">
-              <use href="./images/icons.svg#modal-phone"></use>
-            </svg>
-          </label>
+            <label class="order__field" for="e-mail">
+              <span class="order__label">Почта</span>
+              <input class="order__input" type="email" name="e-mail" id="e-mail" />
+              <svg class="order__icon">
+                <use href="./images/icons.svg#modal-email"></use>
+              </svg>
+            </label>
 
-          <label class="order__label" for="e-mail">
-            Почта
-            <input class="order__input" type="email" name="e-mail" id="e-mail" />
-            <svg class="order__icon">
-              <use href="./images/icons.svg#modal-email"></use>
-            </svg>
-          </label>
-
-          <label class="order__label">
-            Комментарий
-            <textarea
-              class="order__commentary"
-              name="commentary"
-              placeholder="Введите текст"
-            ></textarea>
-          </label>
+            <label class="order__field">
+              <span class="order__label">Комментарий</span>
+              <textarea
+                class="order__commentary"
+                name="commentary"
+                placeholder="Введите текст"
+              ></textarea>
+            </label>
+          </div>
 
           <label class="order__agreement" for="policy">
             <input

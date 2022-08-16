@@ -4,22 +4,23 @@
     @extend %list;
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    column-gap: 8px;
+    row-gap: 15px;
 
     margin-bottom: 40px;
 
-      @media screen and (min-width:$tablet) {
+      @include media-query(tablet) {
         margin-bottom: 30px;
         justify-content: center;
       }
 
     //    Закрепленный хэдэр
-      @media screen and (min-width:$tablet) {
+      @include media-query(tablet){
         margin-top: 80px;
         }
     //    Закрепленный хэдэр    
 
-      @media screen and (min-width:$desktop) {
+      @include media-query(desktop) {
         margin-bottom: 50px;
       }
 
