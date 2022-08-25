@@ -3,28 +3,26 @@
 .site-nav {
     @extend %list;
 
-    @media screen and (min-width:$tablet) {
+    @include media-query(tablet) {
         @include centered-flex();
         margin-left: 88px;
         } 
 
-    @media screen and (min-width:$desktop) {
+        @include media-query(desktop) {
         margin-left: 93px;
         }         
     
     &__item:not(:last-child) {
        
-        @media screen and (max-width:($tablet - 1px)) {
+        @include media-query(tablet-less) {
                 margin-bottom: 32px;
             }
 
-        @media screen and (min-width:$tablet) {
+        @include media-query(tablet)  {
                 margin-right: 50px
             }
     }
-        
-   
-    
+          
     &__link {
         position: relative;
         color: $title-text-color;
@@ -33,12 +31,12 @@
         text-decoration: none;
         display: block;
 
-        @media screen and (max-width:calc($tablet - 1px)) {
+        @include media-query(tablet-less) {
         font-size:40px;
         line-height: calc(48 / 40);
             }
 
-        @media screen and (min-width:$tablet) {
+        @include media-query(tablet) {
         padding-top: 32px;
         padding-bottom: 32px;
             }
@@ -58,7 +56,7 @@
     /*Подчёркивание ссылки текущей страницы (на которой сейчас находится пользователь)*/
     &__link::after {
         
-        @media screen and (min-width:$tablet) {
+        @include media-query(tablet) {
 
         position: absolute;
         content: '';
@@ -71,20 +69,17 @@
     
         opacity: 0;
         @include transition(opacity)
-            }
-
-        
+            }        
     }
     
     &__link:hover::after {
-        @media screen and (min-width:$tablet) {
+        @include media-query(tablet) {
             opacity: 1;
-            }
-        
+            }       
     }
     
     &__link--current::after {
-        @media screen and (min-width:$tablet) {
+        @include media-query(tablet) {
             opacity: 1;
         }
     }

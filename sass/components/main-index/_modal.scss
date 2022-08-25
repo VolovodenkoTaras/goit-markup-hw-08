@@ -29,7 +29,13 @@
 }
 
 .modal { 
-    width: 100%;  
+    position:absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%) scale(1);
+	max-height: 609px;
+    width: 100%;
+    max-width: 450px;
     padding: 40px;
     background-color: $primary-white-color;
     border-radius: 4px;
@@ -37,24 +43,18 @@
         0px 2px 1px rgba(0, 0, 0, 0.2);
  
     opacity: 1;
-
     transition: transform $transition-duration $transition-function,
     opacity $transition-duration $transition-function;
 
-
-        @include media-query(mobile) {
+        @media screen and (min-width:$mobile) and (min-height:609px) {
             position: absolute;
             top: 50%;
             left: 50%;
-            max-width: 450px;
-            max-height: 609px;
-    
             transform: translate(-50%, -50%) scale(1);
-        }
-
-        @include media-query(desktop) {
+       }
+       
+        @media screen and (min-width:$desktop) {
             max-width: 528px;
-            max-height: 581px;
         }
 }
 
@@ -208,8 +208,11 @@
 
     @include centered-flex();
 
-    margin-top: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 12px;
+
+        @include media-query(mobile) {
+                margin-bottom: 25px;
+            }
         }   
     
     &__checkbox {
@@ -268,4 +271,3 @@
     }
 
 }
-

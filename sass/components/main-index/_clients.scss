@@ -1,13 +1,16 @@
 /* Постоянные клиенты*/
 
 .clients {
-    @extend %list;
-    @include centered-flex($justify-content: space-between);
-    flex-wrap: wrap;
-    gap: $indent;
-    padding: 0;
-    margin-left: auto;
-    margin-right: auto;
+
+        &__list {
+          @extend %list;
+          @include centered-flex($justify-content: space-between);
+          flex-wrap: wrap;
+          gap: $indent;
+          padding: 0;
+          margin-left: auto;
+          margin-right: auto;
+    }
 
         &__item {
 
@@ -57,4 +60,5 @@
         width: 106px;
         height: 50px;
        }
+       
 }

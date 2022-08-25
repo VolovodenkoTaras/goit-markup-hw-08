@@ -1,13 +1,14 @@
 .header-social {
     @extend %list;
 
-    @media screen and (max-width:($tablet - 1px)) {
+    @include media-query(tablet-less) {
         @include centered-flex($justify-content:flex-start);
         flex-wrap: wrap;
-        gap: 10px;
+        column-gap: 10px;
+        row-gap: 20px;
     }
 
-    @media screen and (min-width:$tablet) {
+    @include media-query(tablet)  {
         display: none;
     }
 

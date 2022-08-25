@@ -48,6 +48,11 @@
             @content;
         }
     }
+    @if $range==mobile-only {
+        @media (min-width:$mobile) and (max-width:#{$tablet - 0.02}) {
+            @content;
+        }
+    }
     @if $range==tablet-less {
         @media (max-width:#{$tablet - 0.02}) {
             @content;

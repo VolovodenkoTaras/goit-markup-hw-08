@@ -3,7 +3,7 @@
    position: relative;
 
 //    Закрепленный хэдэр
-    @media screen and (min-width:$tablet) {
+    @include media-query(tablet) {
         position: fixed;
         top: 0;
         left: 0;
@@ -24,11 +24,11 @@
       
     &__nav {
 
-        @media screen and (max-width:($tablet - 1px)) {
+        @include media-query(tablet-less) {
                 margin-bottom: auto;
             }
 
-        @media screen and (min-width:$tablet) {
+        @include media-query(tablet)  {
                 @include centered-flex();
             }
       }   

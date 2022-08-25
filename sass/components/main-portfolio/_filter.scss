@@ -15,7 +15,7 @@
       }
 
     //    Закрепленный хэдэр
-      @include media-query(tablet){
+      @include media-query(tablet) {
         margin-top: 80px;
         }
     //    Закрепленный хэдэр    
@@ -61,11 +61,6 @@
 }
 
 // Фильтрация по кнопкам в портфолию
-
-// input[type="radio"] {
-//   position: absolute;
-//   left: -9999px;
-// }
 
 [value="Все"]:checked~.filter [for="Все"],
 [value="Веб-сайт"]:checked~.filter [for="Веб-сайт"],

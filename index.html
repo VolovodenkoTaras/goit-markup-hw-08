@@ -101,11 +101,23 @@
           <div class="container">
             <div class="hero__box">
               <h1 class="hero__title">
-                Эффективные&nbsp;решения
-                <!-- <br /> -->
-                для&nbsp;вашего&nbsp;бизнеса
+                <span class="flicker">Эффект</span>ивные&nbsp;реш<span class="fast-flicker"
+                  >ения</span
+                >
+                для&nbsp;<span class="fast-flicker">ваш</span>его&nbsp;<span class="flicker"
+                  >биз</span
+                >неса
               </h1>
-              <button class="button" type="button" data-modal-open>Заказать услугу</button>
+
+              <button class="button hero__button" type="button" data-modal-open>
+                <ul class="hero__list">
+                  <li class="hero__item"></li>
+                  <li class="hero__item"></li>
+                  <li class="hero__item"></li>
+                  <li class="hero__item"></li>
+                  Заказать услугу
+                </ul>
+              </button>
             </div>
           </div>
         </section>
@@ -175,6 +187,7 @@
                   <img
                     srcset="./images/work/work1@1x-min.jpg 1x, ./images/work/work1@2x-min.jpg 2x"
                     src="./images/work/work1@1x-min.jpg"
+                    loading="lazy"
                     alt="Программист за работой"
                     width="370"
                   />
@@ -186,6 +199,7 @@
                   <img
                     srcset="./images/work/work2@1x-min.jpg 1x, ./images/work/work2@2x-min.jpg 2x"
                     src="./images/work/work2@1x-min.jpg"
+                    loading="lazy"
                     alt="Дизайнер разрабатывает мобильные приложения"
                     width="370"
                   />
@@ -197,6 +211,7 @@
                   <img
                     srcset="./images/work/work3@1x-min.jpg 1x, ./images/work/work3@2x-min.jpg 2x"
                     src="./images/work/work3@1x-min.jpg"
+                    loading="lazy"
                     alt="Художник выбирает цвет"
                     width="370"
                   />
@@ -213,30 +228,39 @@
             <h2 class="section__title">Наша команда</h2>
             <ul class="team">
               <li class="team__item">
-                <picture>
-                  <source
-                    srcset="
+                <!-- <picture>
+                <source srcset="
                       ./images/team/team1@1x-480.jpg 450w,
                       ./images/team/team1@2x-480.jpg 900w
-                    "
-                    media="(max-width: 767.98px)"
-                    sizes="(min-width: 320px) 450px, 100vw"
-                  />
-                  <source
-                    srcset="
+                    " media="(max-width: 767.98px)" sizes="(min-width: 320px) 450px, 100vw" />
+                <source srcset="
                       ./images/team/team1@1x-768.jpg 354w,
                       ./images/team/team1@2x-768.jpg 708w
-                    "
-                    media="(max-width: 1199.98px)"
-                    sizes="(min-width: 768px) 354px, 100vw"
-                  />
-                  <source
-                    srcset="
+                    " media="(max-width: 1199.98px)" sizes="(min-width: 768px) 354px, 100vw" />
+                <source srcset="
                       ./images/team/team1@1x-1200.jpg 270w,
                       ./images/team/team1@2x-1200.jpg 540w
-                    "
+                    " media="(min-width: 1200px)" sizes="(min-width: 1200px) 270px, 100vw" />
+                <img src="./images/team/team1@1x-480.jpg" alt="Игорь Демьяненко" />
+              </picture> -->
+                <picture>
+                  <!-- desktop screen -->
+                  <source
                     media="(min-width: 1200px)"
-                    sizes="(min-width: 1200px) 270px, 100vw"
+                    srcset="./images/team/team1@1x-1200.jpg 1x, ./images/team/team1@2x-1200.jpg 2x"
+                    type="image/jpg"
+                  />
+                  <!-- tablet screen -->
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="./images/team/team1@1x-768.jpg 1x, ./images/team/team1@2x-768.jpg 2x"
+                    type="image/jpg"
+                  />
+                  <!-- mobile screen -->
+                  <source
+                    media="(max-width: 767.98px)"
+                    srcset="./images/team/team1@1x-480.jpg 1x, ./images/team/team1@2x-480.jpg 2x"
+                    type="image/jpg"
                   />
                   <img src="./images/team/team1@1x-480.jpg" alt="Игорь Демьяненко" />
                 </picture>
@@ -296,33 +320,43 @@
                 </div>
               </li>
               <li class="team__item">
-                <picture>
-                  <source
-                    srcset="
+                <!-- <picture>
+                <source srcset="
                       ./images/team/team2@1x-480.jpg 450w,
                       ./images/team/team2@2x-480.jpg 900w
-                    "
-                    media="(max-width: 767.98px)"
-                    sizes="(min-width: 320px) 450px, 100vw"
-                  />
-                  <source
-                    srcset="
+                    " media="(max-width: 767.98px)" sizes="(min-width: 320px) 450px, 100vw" />
+                <source srcset="
                       ./images/team/team2@1x-768.jpg 354w,
                       ./images/team/team2@2x-768.jpg 708w
-                    "
-                    media="(max-width: 1199.98px)"
-                    sizes="(min-width: 768px) 354px, 100vw"
-                  />
-                  <source
-                    srcset="
+                    " media="(max-width: 1199.98px)" sizes="(min-width: 768px) 354px, 100vw" />
+                <source srcset="
                       ./images/team/team2@1x-1200.jpg 270w,
                       ./images/team/team2@2x-1200.jpg 540w
-                    "
+                    " media="(min-width: 1200px)" sizes="(min-width: 1200px) 270px, 100vw" />
+                <img src="./images/team/team2@1x-480.jpg" alt="Ольга Репина" />
+              </picture> -->
+                <picture>
+                  <!-- desktop screen -->
+                  <source
                     media="(min-width: 1200px)"
-                    sizes="(min-width: 1200px) 270px, 100vw"
+                    srcset="./images/team/team2@1x-1200.jpg 1x, ./images/team/team2@2x-1200.jpg 2x"
+                    type="image/jpg"
+                  />
+                  <!-- tablet screen -->
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="./images/team/team2@1x-768.jpg 1x, ./images/team/team2@2x-768.jpg 2x"
+                    type="image/jpg"
+                  />
+                  <!-- mobile screen -->
+                  <source
+                    media="(max-width: 767.98px)"
+                    srcset="./images/team/team2@1x-480.jpg 1x, ./images/team/team2@2x-480.jpg 2x"
+                    type="image/jpg"
                   />
                   <img src="./images/team/team2@1x-480.jpg" alt="Ольга Репина" />
                 </picture>
+
                 <div class="team__box">
                   <h3 class="team__title">Ольга Репина</h3>
                   <p class="team__text" lang="en">Frontend Developer</p>
@@ -379,30 +413,39 @@
                 </div>
               </li>
               <li class="team__item">
-                <picture>
-                  <source
-                    srcset="
+                <!-- <picture>
+                <source srcset="
                       ./images/team/team3@1x-480.jpg 450w,
                       ./images/team/team3@2x-480.jpg 900w
-                    "
-                    media="(max-width: 767.98px)"
-                    sizes="(min-width: 320px) 450px, 100vw"
-                  />
-                  <source
-                    srcset="
+                    " media="(max-width: 767.98px)" sizes="(min-width: 320px) 450px, 100vw" />
+                <source srcset="
                       ./images/team/team3@1x-768.jpg 354w,
                       ./images/team/team3@2x-768.jpg 708w
-                    "
-                    media="(max-width: 1199.98px)"
-                    sizes="(min-width: 768px) 354px, 100vw"
-                  />
-                  <source
-                    srcset="
+                    " media="(max-width: 1199.98px)" sizes="(min-width: 768px) 354px, 100vw" />
+                <source srcset="
                       ./images/team/team3@1x-1200.jpg 270w,
                       ./images/team/team3@2x-1200.jpg 540w
-                    "
+                    " media="(min-width: 1200px)" sizes="(min-width: 1200px) 270px, 100vw" />
+                <img src="./images/team/team3@1x-480.jpg" alt="Николай Тарасов" />
+              </picture> -->
+                <picture>
+                  <!-- desktop screen -->
+                  <source
                     media="(min-width: 1200px)"
-                    sizes="(min-width: 1200px) 270px, 100vw"
+                    srcset="./images/team/team3@1x-1200.jpg 1x, ./images/team/team3@2x-1200.jpg 2x"
+                    type="image/jpg"
+                  />
+                  <!-- tablet screen -->
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="./images/team/team3@1x-768.jpg 1x, ./images/team/team3@2x-768.jpg 2x"
+                    type="image/jpg"
+                  />
+                  <!-- mobile screen -->
+                  <source
+                    media="(max-width: 767.98px)"
+                    srcset="./images/team/team3@1x-480.jpg 1x, ./images/team/team3@2x-480.jpg 2x"
+                    type="image/jpg"
                   />
                   <img src="./images/team/team3@1x-480.jpg" alt="Николай Тарасов" />
                 </picture>
@@ -462,30 +505,39 @@
                 </div>
               </li>
               <li class="team__item">
-                <picture>
-                  <source
-                    srcset="
+                <!-- <picture>
+                <source srcset="
                       ./images/team/team4@1x-480.jpg 450w,
                       ./images/team/team4@2x-480.jpg 900w
-                    "
-                    media="(max-width: 767.98px)"
-                    sizes="(min-width: 320px) 450px, 100vw"
-                  />
-                  <source
-                    srcset="
+                    " media="(max-width: 767.98px)" sizes="(min-width: 320px) 450px, 100vw" />
+                <source srcset="
                       ./images/team/team4@1x-768.jpg 354w,
                       ./images/team/team4@2x-768.jpg 708w
-                    "
-                    media="(max-width: 1199.98px)"
-                    sizes="(min-width: 768px) 354px, 100vw"
-                  />
-                  <source
-                    srcset="
+                    " media="(max-width: 1199.98px)" sizes="(min-width: 768px) 354px, 100vw" />
+                <source srcset="
                       ./images/team/team4@1x-1200.jpg 270w,
                       ./images/team/team4@2x-1200.jpg 540w
-                    "
+                    " media="(min-width: 1200px)" sizes="(min-width: 1200px) 270px, 100vw" />
+                <img src="./images/team/team4@1x-480.jpg" alt="Михаил Ермаков" />
+              </picture> -->
+                <picture>
+                  <!-- desktop screen -->
+                  <source
                     media="(min-width: 1200px)"
-                    sizes="(min-width: 1200px) 270px, 100vw"
+                    srcset="./images/team/team4@1x-1200.jpg 1x, ./images/team/team4@2x-1200.jpg 2x"
+                    type="image/jpg"
+                  />
+                  <!-- tablet screen -->
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="./images/team/team4@1x-768.jpg 1x, ./images/team/team4@2x-768.jpg 2x"
+                    type="image/jpg"
+                  />
+                  <!-- mobile screen -->
+                  <source
+                    media="(max-width: 767.98px)"
+                    srcset="./images/team/team4@1x-480.jpg 1x, ./images/team/team4@2x-480.jpg 2x"
+                    type="image/jpg"
                   />
                   <img src="./images/team/team4@1x-480.jpg" alt="Михаил Ермаков" />
                 </picture>
@@ -549,10 +601,10 @@
         </section>
 
         <!--Постоянные клиенты-->
-        <section class="section">
+        <section class="section clients">
           <div class="container">
             <h2 class="section__title">Постоянные клиенты</h2>
-            <ul class="clients">
+            <ul class="clients__list">
               <li class="clients__item">
                 <a class="clients__link" href="" target="_blank" rel="nofollow noopener noreferrer">
                   <svg class="clients__icon">
@@ -775,7 +827,6 @@
               <a class="order__link" href="">Условия договора</a>
             </span>
           </label>
-
           <button class="button" type="submit" disabled="true" data-submit-btn>Отправить</button>
         </form>
       </div>
